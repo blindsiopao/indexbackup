@@ -1,21 +1,19 @@
 <body>
 <div id="container">
             <div id="headerArea">
-                <div id="header"></div>
-                <nav id="navbar">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div id="header" style="height: 175px;"></div>
+                
+            <nav id="navbar" style="margin-bottom: 10px;"><ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+              </ul></nav></div>
 
             <div id="flex">
-                <aside id="leftSidebar">
+                <aside id="leftSidebar" style="margin-right: 10px;">
                     <h2>Updates</h2>
                     <div class="box">
                         <p>I have recently updated this tool as of August 2022!</p>
@@ -38,15 +36,21 @@
                     </ul>
                 </aside>
                 <main>
-                    <h1>welcome to my website!!</h1>
-                    <p><strong></strong></p>
-                    <p>I'm nanno and this is my little sandbox on the web</p>
-                    <p>As you can tell this site is still super under construction, I'm currently doing this all on my phone so it's a little tricky but I'm committed to making something super cool :) </p>
-         
+                    <h1>Welcome to my Layout Maker!</h1>
+                    <p><strong>Please read this first!</strong></p>
+                    <p>This tool generates a layout that is responsive, which means it looks great on phones! Use dropdowns above to customize your layout's general features. Click the button to generate your HTML and CSS, and paste it into a file on Neocities.</p>
+                    <p>Then you can replace all of the text with your own. For more customization, the CSS code has comments to explain what each part changes. Please read through the code - even if you have no idea what it means.</p>
+                    <p>If you're feeling up for a challenge, I put together <a href="https://learn.sadgrl.online/understanding-tweaking-my-layout-maker/" target="_blank">a guide</a> which goes over the structure of how this layout is built, along with some specific tips on how to edit it in certain ways.</p>
+                    <p>Check the links in the sidebar for more resources to build your own website!</p>
+
+                    <p> - Cat Ipsum - </p>
+                    <p>Rub my belly hiss swipe at owner's legs sniff catnip and act crazy growl at dogs in my sleep sit on the laptop for hiss at vacuum cleaner i like to spend my days sleeping and eating fishes that my human fished for me.</p>
+
+                    <p>Head nudges eat my own ears. Hey! you there, with the hands why can't i catch that stupid red dot, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff, or roll over and sun my belly curl up and sleep on the freshly laundered towels.</p>
 
 
                 </main>
-                <aside id="rightSidebar">
+                <aside id="rightSidebar" style="margin-left: 10px;">
                     <h2>Updates</h2>
                     <div class="box">
                         <p>I have recently updated this tool as of August 2022!</p>
@@ -70,7 +74,7 @@
                     </ul>
                 </aside>
             </div>
-            <footer id="footer">darcydh.nanno@proton.me, 2023</footer>
+            <footer id="footer" style="margin-top: 10px;">CC0 Public Domain, 2022</footer>
         </div>
         <!-- THIS IS THE CSS !-->
         <style>
@@ -83,11 +87,11 @@
     the images as variables */
 
             :root {
-                --header-image: url('https://c.l3n.co/i/qIeZIK.png');
-                --body-bg-image: url('');
+                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
 
                 /* colors */
-                --content: #4B0150;
+                --content: #43256E;
             }
 
             /* if you have the URL of a font, you can set it below */
@@ -128,7 +132,7 @@
             body {
                 font-family: 'Nunito', sans-serif;
                 margin: 0;
-                background-color: #000000;
+                background-color: #08031A;
                 /* you can delete the line below if you'd prefer to not use an image */
                 background-size: 65px;
                 color: #fceaff;
@@ -171,7 +175,7 @@
 
             #header {
                 width: 100%;
-                background-color: ;
+                background-color: #5e4e8c;
                 /* header color here! */
                 height: 150px;
                 /* this is only for a background image! */
@@ -184,7 +188,7 @@
             /* navigation section!! */
             #navbar {
                 height: 40px;
-                background-color: #0002FF;
+                background-color: #13092D;
                 /* navbar color */
                 width: 100%;
             }
@@ -224,7 +228,7 @@
     if you want to style them separately,
     create styles for #leftSidebar and #rightSidebar */
             aside {
-                background-color: #0002FF;
+                background-color: #241445;
                 width: 200px;
                 padding: 20px;
                 font-size: smaller;
@@ -235,7 +239,7 @@
             /* this is the color of the main content area,
     between the sidebars! */
             main {
-                background-color: #0002FF;
+                background-color: #43256E;
                 flex: 1;
                 padding: 20px;
                 order: 2;
@@ -256,7 +260,7 @@
             }
 
             footer {
-                background-color: #0002FF;
+                background-color: #13092D;
                 /* background color for footer */
                 width: 100%;
                 height: 40px;
@@ -282,7 +286,7 @@
 
             /* this is just a cool box, it's the darker colored one */
             .box {
-                background-color: #0002FF;
+                background-color: #13092D;
                 border: 1px solid #ED64F5;
                 padding: 10px;
             }
@@ -294,7 +298,7 @@
                 height: 30px;
                 padding: 10px;
                 font-size: smaller;
-                background-color: #0002FF;
+                background-color: #13092D;
             }
 
 
