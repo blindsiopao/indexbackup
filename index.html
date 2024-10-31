@@ -322,18 +322,21 @@ i.fas.fa-forward {
 }
 
 
-.embed-container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 100%; /* Ensures responsiveness *
-            margin: 20px auto;
-        }
 
-        /* Individual embeds */
-        .spotify-embed, .other-embed {
-            flex: 1; /* Ensures both items take equal space */
-            max-width: 600px; /* Limits maximum width */
-        }
+          .embed-container {
+        display: flex;
+        justify-content: flex-start; /* Aligns items to the left */
+        max-width: 100%; /* Ensures responsiveness */
+        gap: 10px; /* Adjust as needed */
+        margin: 20px auto;
+    }
+
+    /* Individual embeds */
+    .spotify-embed, .other-embed {
+        flex: 1; /* Ensures both items take equal space */
+        max-width: 600px; /* Limits maximum width */
+        margin: 0; /* Ensure no margin is applied */
+    }
 
 </style>
 
