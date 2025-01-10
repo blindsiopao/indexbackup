@@ -334,23 +334,106 @@ i.fas.fa-forward {
     overflow: hidden;
 }
 
+.new-grid-container {
+    display: grid; /* Makes this container a grid */
+    grid-template-columns: 1fr 1fr; /* Two columns for the 2x2 layout */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 5%; /* Space between items as a percentage of container size */
+    justify-content: center; /* Centers the grid horizontally */
+    align-content: center; /* Centers the grid vertically */
+    margin: 5% auto; /* Adds spacing below the previous grid */
+    width: 90%; /* Grid width adjusts relative to viewport */
+    max-width: 800px; /* Ensures the grid doesn't get too wide */
+}
 
+/* Styles for each box with responsive positioning */
+.newbox1 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 105%; /* Relative to container width */
+    height: 40vh; /* Relative to viewport height */
+    position: relative;
+    top: -6vh; /* Moves the box down by 2% of the viewport height */
+    left: -1%; /* Moves the box right by 5% of the container width */
+}
 
-          .embed-container {
-        display: flex;
-        justify-content: center; /* Aligns items to the left */
-        max-width: 100%; /* Ensures responsiveness */
-        gap: 10px; /* Adjust as needed */
-        margin: 20px auto;
+.newbox2 {
+    background-color: saddlebrown; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 90%; 
+    height: 48vh; 
+    position: relative;
+    top: -6vh; /* Moves the box up */
+    left: -3%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+.newbox3 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 70%; 
+    height: 20vh; 
+    position: relative;
+    top: -3vh; /* Moves the box down */
+    right: -20%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+.newbox4 {
+    background-color: lightgray; 
+    border: #990000 1px solid; 
+    text-align: center;
+    width: 70%; 
+    height: 20vh; 
+    position: relative;
+    bottom: 3vh; /* Moves the box up */
+    right: 8%; /* Moves the box left */
+     overflow: auto; /* Adds scrolling when content overflows */
+}
+
+/* Add media queries for fine-tuning responsiveness */
+@media (max-width: 768px) {
+    .new-grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        grid-template-rows: repeat(4, auto); /* Four rows for the boxes */
     }
-
-    /* Individual embeds */
-    .spotify-embed, .other-embed {
-        flex: 1; /* Ensures both items take equal space */
-        max-width: 600px; /* Limits maximum width */
-        margin: 0; /* Ensure no margin is applied */
+    .newbox1, .newbox2, .newbox3, .newbox4 {
+        width: 80%; /* Make boxes smaller for narrow screens */
+        height: 20vh;
+        top: 0; /* Reset custom positions */
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
+}
+div.hebcal-container {
+ font-family: "Gill Sans MT","Gill Sans",GillSans,Arial,Helvetica,sans-serif;
+ font-size: small;
+}
+div.hebcal-container div h3 {
+ font-family: Georgia,Palatino,"Times New Roman",Times,serif;
+}
+div.hebcal-container div ul.hebcal-results { list-style-type:none }
+div.hebcal-container div ul.hebcal-results li {
+  margin-bottom: 11px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: normal;
+}
+div.hebcal-container div div.hebcal-results .candles { color: red; font-size: large }
+div.hebcal-container div div.hebcal-results .havdalah { color: green }
+div.hebcal-container div div.hebcal-results .parashat { color: black; background: #ff9 }
+div.hebcal-container div div.hebcal-results .holiday { display: none }
 
+.newbox1 video {
+    width: 100%; /* Make the video fill the box's width */
+    height: 100%; /* Make the video fill the box's height */
+    object-fit: cover; /* Ensures the video scales to fill the box without distortion */
+    border: none; /* Remove any default borders */
+}
 </style>
 
 
@@ -367,7 +450,7 @@ i.fas.fa-forward {
 <div class="container snipcss-toI6C">
     <div class="header">
         <div id="header_img">
-            <marquee class="style-VSnf1" id="style-VSnf1">I MIXED MATCHA GREEN TEA WITH RASPBERRY SPARKLING WATER NOW MY TUMMY HURTS </marquee>
+            <marquee class="style-VSnf1" id="style-VSnf1">I CANNOT BE BLAMED FOR THE PHANTASMAGORIC REVELATIONS THAT DESCEND UPON YOU ONCE SEEING THIS SITE IN MOBILE, MAY GOD HAVE MERCY ON YOUR SOUL </marquee>
         </div>
     </div>
 
@@ -560,7 +643,7 @@ else
                         <br>
                         <p id="style-Y2qsm" class="style-Y2qsm">
                         </p>
-                        <p id="style-qzj3h" class="style-qzj3h"> ♡ layout inspired from awhe on neocities!</p>
+                        <p id="style-qzj3h" class="style-qzj3h">layout inspired from awhe on neocities!</p>
                         <p></p>
                     </td>
                 </tr>
@@ -570,45 +653,51 @@ else
     <div class="foot">
         <div id="style-2JP75" class="style-2JP75">
             <span id="style-QH8JG" class="style-QH8JG">
-                <center> MUTUALS </center>
+                <center> HASTUR'S LUCKY FEW </center>
             </span>
             <br>
-            <br>
         </div>
-        <center>
-            <a target="_blank" title="concon.soy" href="https://concon.soy">
-                <img src="https://concon.soy/images/buttons/conconbutton.gif" alt="conconbutton.gif">
-            </a>
-            <a target="_blank" title="concon.soy" href="https://concon.soy">
-                <img src="https://the-scraps.neocities.org/buttons/schizobutt.png">
-            </a>
-            <a href="https://digitalcheese.xyz/"><img src="https://digitalcheese.xyz/sb.gif"></a>
-            <a href="https://2003horlenave.neocities.org/"><img src="https://i.imgur.com/MaczXf9.gif"></a>
-            <a href="https://pnnamerica.com/"><img src="https://i.imgur.com/V1Yj3lv.png"></a>
-            <a href="https://thepiratebay66.neocities.org/"><img src="https://i.imgur.com/tVtCsmY.png"></a>
-            <a href="https://luagunsx.xyz"><img src="https://luagunsx.xyz/2024_01_26_11i_Kleki.png" alt="Visit my site!"></a>
-            <a href="https://slaid.neocities.org/"><img src="https://slaid.neocities.org/slaibeach.png" alt="Visit my site!"></a>
-            <a href="https://humanraccoon.com"><img src="https://owlman.neocities.org/OwlMan/Banners/humanraccoon_hr-embed.png"></a>
-            <a href="https://inpieces.rip/"><img src="https://inpieces.rip/pix/thanksvhs.gif"></a>
-            <a href="https://wizardperspective.neocities.org/"><img src="https://wizardperspective.neocities.org/wizardperspective.png" alt="HTML tutorial" id="style-MUiWB" class="style-MUiWB"></a>
-            <a href="https://44caliber.net/"><img src="https://44caliber.net/m/44c.jpg" alt="HTML tutorial" id="style-GPwix" class="style-GPwix"></a>
-            <a href="https://hardmachine.neocities.org/"><img src="https://i.imgur.com/wKPFSRy.png"></a>
-            <a href="https://dannarchy.com/"><img src="https://dannarchy.com/images/d_now.gif"></a>
-            <a href="https://tomoko-lodge.neocities.org/"><img src="https://i.imgur.com/hf3URjB.png"></a>
-            <a href="https://engelsbeginn.neocities.org/"><img src="https://i.imgur.com/wPnpIxL.png">
-            </a><a href="https://cabbagesorter.neocities.org/"><img src="https://cabbagesorter.neocities.org/buttons/cabbagesorter2.gif">
-            </a><a href="https://maleficarum.neocities.org"><img src="https://maleficarum.neocities.org/site-button.png">
-            </a><a href="https://mayfl0wer.neocities.org"><img src="https://mayfl0wer.neocities.org/images/88x31/coffincorner.gif">
-            </a><a href="https://arandomsite.neocities.org/"><img src="https://arandomsite.neocities.org/IMG/buttons/88x31.gif"></a>
-            <a href="https://graybox.neocities.org" target="blank_" title="The GrayBox website (duh)"><img src="https://graybox.neocities.org/images/button1.png"></a>
-            <a href="https://binnsbin.neocities.org"><img src="https://binnsbin.neocities.org/buttons/site-button.gif"></a>
-            <a href="https://capstasher.neocities.org"><img src="https://capstasher.neocities.org/csc_88x31.png"></a>
-            <a href="https://elaboraet.neocities.org"><img src="https://elaboraet.neocities.org/static/elrt.png"></a>
-            <a href="https://pagespages.neocities.org"><img src="https://pagespages.neocities.org/pages_pages_button.jpg"></a>
-            <a href="https://forum.agoraroad.com/"><img alt="Agora Road" src="https://forum.agoraroad.com/data/addonflare/awardsystem/icons/180.gif"></a>
-            <hr>
+       <center>
+            <a href="https://cottage.thecozy.cat/"><img decoding="async" src="https://i.imgur.com/Eh8NawK.gif"></a> 
+            <a href=https://kotteism.neocities.org/><img src=https://files.catbox.moe/7f0vdh.png></a>
+            <a href=https://maleficarum.neocities.org><img src=https://maleficarum.neocities.org/site-button.png></a>
+            <a href=https://tomoko-lodge.neocities.org><img src=https://i.imgur.com/IVjunRT.jpeg></a>
+            <a href=https://dykeism.neocities.org><img src=https://dykeism.neocities.org/images/button1.gif></a>
+            <a href=https://maydb.net><img src=https://maydb.net/images/88x31/maydb.png></a>
+            <a href=https://thepiratebay66.neocities.org><img src=https://thepiratebay66.neocities.org/img/mybutton.png></a>
+            <a href="https://personal.luagunsx.xyz"><img src="https://personal.luagunsx.xyz/2024_01_26_11i_Kleki.png" alt="Visit my site!"/></a>
+            <a href="https://engelsbeginn.ing/"><img src="https://i.imgur.com/wPnpIxL.png">
+            <a href="https://concon.soy"><img src="https://concon.soy/images/buttons/conconbutton.gif">
+            <a href="https://kwaamfan.neocities.org"><img src="https://kwaamfan.neocities.org/main/images/88x31/kwaamfan_haruka.gif">
+            <a href="https://idelides.xyz/"><img src="https://idelides.xyz/neocities-idelides/Neocities%20button.png"></a>
+            <a href="https://humanraccoon.com"><img src="https://humanraccoon.com/elements/rcnbutton.png"></a>
+            <a href="https://wizardperspective.neocities.org"><img src="https://i.imgur.com/E5gfMFz.png"></a>
+           <a href="https://cabbagesorter.neocities.org"><img src="https://cabbagesorter.neocities.org/BUTTONS/cabbagesorter2.gif"></a>
+           <a href="https://elaboraet.neocities.org"><img src="https://elaboraet.neocities.org/static/elrt.png"></a>
+           <a href="https://agoraroad.neocities.org"><img src="https://forum.agoraroad.com/data/addonflare/awardsystem/icons/180.gif?1632460929"></a>
+           <a href="https://netofcalypso.com"><img src="https://netofcalypso.com/Buttons/nocbutt.png"></a>
+           <a href="https://schizopunk-media.neocities.org"><img src="https://schizopunk-media.neocities.org/Buttons/schizobutt.png"></a>
+           <a href=https://hardmachine.neocities.org/><img src=https://i.imgur.com/wKPFSRy.png></a>
+           <a href=https://inpieces.rip><img src=https://inpieces.rip/pix/thanksvhs.gif></a>
+           <a href=https://pnnamerica.com><img src=https://pnnamerica.neocities.org/PNN.png></a>
+          <a href=https://pagespages.neocities.org><img src=https://pagespages.neocities.org/pages_pages_button.jpg></a>
+          <a href=https://sephiria.com><img src=https://sephiria.com/materia/favicon/sephiria.gif></a>
+          <a href="https://arandomsite.neocities.org/"><img src="https://arandomsite.neocities.org/IMG/buttons/88x31.gif" /></a>
+          <a href="https://milk-tea.neocities.org/"><img src="https://milk-tea.neocities.org/button4.gif" /></a>
+          <a href="https://slaid.neocities.org"><img src="https://slaid.neocities.org/mainpage2/slaibeach8.png" /></a>
+          <a href=https://misterdizzy.neocities.org><img src=https://misterdizzy.neocities.org/pixelart/8831.png></a>
+          <a href=https://eldritchdata.neocities.org><img src= https://misterdizzy.neocities.org/projects/buttons/eldritchdata.png></a>
+          <a href=https://www.cozynet.org><img src=https://www.cozynet.org/images/cozynet_88x31_banner.gif></a>
+           <a href=https://wrongthink.link><img src=https://i.imgur.com/POqQOE2.png></a>
+           <a href=https://44caliber.net><img src=https://i.imgur.com/OdYG9lN.jpeg></a>
+           <a href=https://capstasher.neocities.org><img src= https://capstasher.neocities.org/csc_88x31.png></a>
+          <a href=https://joppiesaus.neocities.org><img src=https://i.imgur.com/cX7sbu5.png></a>
+          <a href=https://dannarchy.com><img src=https://dannarchy.com/images/d_now.gif></a>
+          <a href=https://angeleyesprings.neocities.org><img src=https://angeleyesprings.neocities.org/buttons/angeleyebutton.png></a> 
+          </center>
+
+
         </center>
-        
         
         
         
@@ -620,18 +709,33 @@ else
     
 </div>
 
- <div class="embed-container">
-        <!-- Spotify embed on the left -->
-        <div class="spotify-embed">
-           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6ha0zpKDA0IQ8LuWbsAvyQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        
-        <!-- Placeholder for another embed on the right -->
-        <div class="other-embed">
-            <!-- Add your second embed or content here -->
-   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1B3JgfpXPmKf9PPS74D1Qb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<div class="new-grid-container">
+    <div class="newbox1">  
+   <video src="videos/my-video.mp4" controls></video>
     </div>
-
+    
+    
+    <div class="newbox2">
+    <div id="hebcal-shabbat"></div>
+<center><div id="hebcal-shabbat"></div>
+<script>
+fetch('https://www.hebcal.com/shabbat?cfg=i2&geonameid=5095281&ue=off&b=30&M=on&lg=a&tgt=_top')
+  .then(response => response.text())
+  .then(data => document.getElementById('hebcal-shabbat').innerHTML = data);
+</script></center>
+    </div>
+    
+    
+    <div class="newbox3">
+    
+    </div>
+    
+    
+    <div class="newbox4">
+    
+    
+    </div>
+</div>
 
 <div class="chat">
 <iframe src="https://www3.cbox.ws/box/?boxid=3533582&boxtag=saJiGi" width="245" height="330" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>		
@@ -690,8 +794,8 @@ else
                 path:"https://files.catbox.moe/1uwzfi.mp3"
             },
             {
-                name:"WHEN DOVES CRY - prince",
-                path:"https://files.catbox.moe/9x2jjd.mp4"
+                name:"SOMETHING - the beatles",
+                path:"https://files.catbox.moe/gpp756.mp3"
             },
               
         ];
@@ -802,4 +906,5 @@ else
         // load the first track in the tracklist
         loadTrack(track_index);
     </script>
+  
   
