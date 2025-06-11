@@ -1,306 +1,365 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>itinerae: merry xmas</title>
+           <!DOCTYPE html>
+<html>
+  <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+             
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-           
+        <link href='https://fonts.googleapis.com/css2?family=Savate' rel='stylesheet' type='text/css'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itinerae: merry xmas</title>
+
     
     <style type="text/css">
-
-               <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Savate" rel="stylesheet" type="text/css">
-               
 body {
-  background: #4f4809;
+  background:#4f4809;
   font-family: "Savate", sans-serif;
   font-size: 12px;
   text-shadow: 0px 0px 1px #c7820c;
-  color: #b84a06;
+  color:#b84a06;
   letter-spacing: 1px;
-  line-height: 11px;
-}
-
-/* Layout */
+  line-height:11px;}
+           
+ 
 #layout {
-  margin: 70px auto;
-  width: 1020px; /* increased from 820px */
-}
-#layout::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    margin: 70px auto;
+    width: 820px;}
+      
 
-/* Header, Navigation, Footer */
-#header1, #navigation1, #footer1 {
-  width: 920px; /* increased from 720px */
-  margin: 0 auto;
-  float: left;
-}
+#header1 {
+    width: 720px;
+    float: left;
+    margin: 0 auto;}
+
 #header2 {
-  height: 40px;
-  border-bottom: 1px solid #2b0c02;
-}
+    height: 40px;
+    background: transparent;
+    border-bottom:1px solid #2b0c02;
+    margin: 0px;}
+      
+
+#navigation1 {
+    width: 720px;
+    float: left;
+    margin: 0 auto;}
+
 #navigation2 {
-  height: 20px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  padding: 1px 0;
-  text-align: center;
-  background: transparent;
-  border-top: 2px solid #2b0c02;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-#navigation2 a {
-  width: 80px;
-  display: inline-block;
-  padding: 4px;
-  background: #2b0c02;
-  font: bold 12px "Savate", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #D46666;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
+    height: 20px;
+    line-height:20px;
+    background: transparent;
+    margin: 0px;
+    margin-bottom:10px;
+    padding:1px;padding-top:0px;
+    text-align:center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top:2px solid #2b0c02;}
+      
+#navigation2 a { 
+width:80px;
+display:inline-block;
+background:#2b0c02; 
+font:bold 12px "Savate", sans-serif;
+text-transform:uppercase;
+padding:4px; 
+letter-spacing:3px;
+color:#D46666;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;}
+      
 #navigation2 a:hover {
-  color: #b84a06;
-}
+width:80px;
+display:inline-block;
+background:; 
+font:bold 12px "Savate", sans-serif;
+text-transform:uppercase;
+padding:4px; 
+letter-spacing:3px;
+color:#b84a06;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;}
+      
+      
 
-/* Columns */
-#left1, #content1, #right1 {
-  width: 300px; /* previously 180/360/180 — now equally expanded */
-  float: left;
-  margin: 0;
-}
-#left2, #content2, #right2 {
-  padding: 6px;
-}
+#content1 {
+    width: 360px;
+    float: left;
+    margin: 0 auto;}
 
-/* Footer */
+#content2 {
+    margin: 0px;
+    padding:6px;}
+
+#left1 {
+    width:180px;
+    float: left;
+    margin: 0 auto;}
+
+#left2 {
+    margin: 0px;
+    padding:6px;}
+
+#right1 {
+    width: 180px;
+    float: left;
+    margin: 0 auto;}
+
+#right2 {
+    margin: 0px;
+    padding:6px;}
+
+#footer1 {
+    width: 720px;
+    float: left;
+    margin: 0 auto;
+    clear: both;}
+
 #footer2 {
-  height: 100px;
-  line-height: 40px;
-  text-align: center;
-}
+    height: 100px;
+    line-height:40px;
+    text-align:center;
+    margin: 0px;}
 
-/* Content Boxes */
-.box, .box-without-title {
-  background: #2b0c02;
-  border: 1px solid #4d1f08;
-  margin-bottom: 2px;
-  border-radius: 5px;
-}
-.box {
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 8px;
-}
-.box-without-title {
-  border-radius: 5px;
-}
 
-/* Titles */
-.title {
-  font: 14px 'Savate', monospace;
-  text-transform: uppercase;
-  color: #b84a06;
-  background: #421803;
-  letter-spacing: 3px;
-  text-align: left;
-  padding: 4px 8px 2px 8px;
-  margin-bottom: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
+  .box {
+  background:#2b0c02;
+  border:1px solid #4d1f08;
+  border-top:0px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  padding:8px;
+  margin-bottom:2px;}
+      
+ .box-without-title {
+  background:#2b0c02;
+  border:1px solid #4d1f08;
+  border-radius:5px;
+  margin-bottom:2px;}
 
-/* Sitename */
-#sitename a {
-  font: 35px 'Danfo', 'Courier New', monospace;
-  color: #3d1901;
-}
 
-/* Menu Links */
+#sitename a {font:35px 'Danfo', courier new;color:#3d1901;}
+      
+.title {font:14px 'Savate' monospace;text-transform:uppercase;color:#b84a06;background:#421803;
+letter-spacing:3px;text-align:left;padding:2px;padding-left:8px;padding-top:4px;margin-bottom:0px;
+border-top-left-radius:5px;border-top-right-radius:5px;}
+      
+          
+a:link, a:visited, a:active { 
+color:#666;text-decoration:none;}
+a:hover {
+color:#F07671;}
+      
 #menu a {
-  display: inline-block;
-  background: #421803;
-  margin-bottom: 4px;
-  padding: 2px 0;
-  width: 150px;
-  line-height: 12px;
-  font: italic 12px Georgia, monospace;
-  text-transform: lowercase;
-  letter-spacing: 3px;
-  text-align: center;
-  border-radius: 5px;
-  color: #632b06;
-}
+    display:inline-block;
+    background:#421803;
+    margin-bottom:4px;
+    padding:1px;
+    padding-top:2px;
+    width:150px;
+    line-height:12px;
+    font:italic 12px georgia,monospace;
+    text-transform:lowercase;
+    letter-spacing:3px;
+    text-align:center;
+    border-radius:5px;
+    color:#632b06;}
+      
 #menu a:hover {
-  background: #7d2c04;
-  color: #4d1f08;
-}
-
-/* Typography Overrides */
-b { color: #b84a06; font-weight: bold; }
-i { font-style: italic; color: #663004; }
-u { color: #daac5c; text-decoration: none; }
-
-a:link, a:visited, a:active { color: #666; text-decoration: none; }
-a:hover { color: #F07671; }
-
-textarea {
-  font: 10px Calibri;
-  letter-spacing: 1px;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 0px;
-  background: transparent;
-}
+    display:inline-block;
+    background:#7d2c04;
+    margin-bottom:4px;
+    padding:1px;
+    padding-top:2px;
+    width:150px;
+    line-height:12px;
+    font:italic 12px georgia,monospace;
+    text-transform:lowercase;
+    letter-spacing:3px;
+    text-align:center;
+    border-radius:5px;
+    color:#4d1f08;}
+            
+      
+      b {color:#b84a06;font-weight:bold;}
+      i {font-style:italic;color:#663004;}
+      u {color:#daac5c;text-decoration:none;}
+     
+      
 ::-webkit-scrollbar-thumb {
-  background-color: #5c2b03;
-  border: none;
-  border-radius: 0px;
+background-color: #5c2b03;  
+border-radius: 0px;
+border:0px solid #ccc;
 }
+::-webkit-scrollbar {
+width: 8px; height: 0px; 
+background: transparent;
+}
+      
+textarea {font:10px calibri;letter-spacing:1px;}
 </style>
 </head>
   
   
   
-
 <body>
-
+  
+  
+  
+  
   <div id="layout">
-
-    <!-- Header -->
-    <div id="header1">
-      <div id="header2">
-        <div id="sitename">
+    
+    
+      
+        <div id="header1">
+        <div id="header2">
+          <div id="sitename">
           <center>
-            <img src="https://64.media.tumblr.com/b21deb3df357742446113bafac959eb1/b9e277d625cab2f2-a1/s75x75_c1/c9236568d5c458271a9e9fba35d1318b03acca88.gifv" alt="star" />
-            <img src="https://64.media.tumblr.com/201c6b41a0c618b41f91a401d6a1e40e/b9e277d625cab2f2-87/s75x75_c1/696b4b19d4b0e71fafd7465e093279d0cfd360a5.gifv" alt="star" />
-            <a href="">CYBER TOMBOY</a>
-            <img src="https://64.media.tumblr.com/201c6b41a0c618b41f91a401d6a1e40e/b9e277d625cab2f2-87/s75x75_c1/696b4b19d4b0e71fafd7465e093279d0cfd360a5.gifv" alt="star" />
-            <img src="https://64.media.tumblr.com/b21deb3df357742446113bafac959eb1/b9e277d625cab2f2-a1/s75x75_c1/c9236568d5c458271a9e9fba35d1318b03acca88.gifv" alt="star" />
-          </center>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation -->
-    <div id="navigation1">
-      <div id="navigation2">
-        <a href="#">link 1</a>
-        <a href="#">link 2</a>
-        <a href="#">link 3</a>
-        <a href="#">link 4</a>
-        <a href="#">link 5</a>
-        <a href="#">link 6</a>
-      </div>
-    </div>
-
-    <!-- Left Column -->
-    <div id="left1">
-      <div id="left2">
-
-        <div class="box-without-title">
-          <center>
-            <img src="https://64.media.tumblr.com/c89a39e57bbc09633b1bcac6458eb69a/7ea053eec279104e-a5/s500x750/971a8048aa3b51e2d8d0a6b26435edc46e312824.pnj" alt="side-image" width="170" />
-          </center>
-        </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          <b>Bold text.</b> <i>Italic Text.</i> <a href="#">Link.</a>
-        </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          <!-- Content here -->
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Center Content -->
-    <div id="content1">
-      <div id="content2">
-
-        <div class="title">title</div>
-        <div class="box">
-          <!-- Content here -->
-        </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          <!-- Content here -->
-        </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          <!-- Content here -->
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Right Column -->
-    <div id="right1">
-      <div id="right2">
-
-        <div class="title">title</div>
-        <div class="box">
-          <div id="menu">
-            <!-- Menu links can go here -->
+<img src="https://64.media.tumblr.com/b21deb3df357742446113bafac959eb1/b9e277d625cab2f2-a1/s75x75_c1/c9236568d5c458271a9e9fba35d1318b03acca88.gifv" alt="star" border="0"> 
+<img src="https://64.media.tumblr.com/201c6b41a0c618b41f91a401d6a1e40e/b9e277d625cab2f2-87/s75x75_c1/696b4b19d4b0e71fafd7465e093279d0cfd360a5.gifv" alt="star"> 
+<a href="">CYBER TOMBOY</a> 
+<img src="https://64.media.tumblr.com/201c6b41a0c618b41f91a401d6a1e40e/b9e277d625cab2f2-87/s75x75_c1/696b4b19d4b0e71fafd7465e093279d0cfd360a5.gifv" alt="star"> 
+<img src="https://64.media.tumblr.com/b21deb3df357742446113bafac959eb1/b9e277d625cab2f2-a1/s75x75_c1/c9236568d5c458271a9e9fba35d1318b03acca88.gifv" alt="star">
+     </center>
+            
           </div>
+          
         </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
         </div>
-
-        <br />
-
-        <div class="title">title</div>
-        <div class="box">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+      
+      
+      
+        <div id="navigation1">
+        <div id="navigation2">
+                   
+ <a href="">link 1</a> <a href="">link 2</a> <a href="">link 3</a> <a href="">link 4</a> <a href="">link 5</a> <a href="">link 6</a>
+                   
+ </div>
         </div>
-
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div id="footer1">
-      <div id="footer2">
-        <b>Layout:</b> <a href="http://itinerae.blogspot.com" target="_blank">Itinerae</a>
-        <b>Pixels:</b> <a href="https://foollovers.com" target="_blank" title="sparkling star pixels, candy cane">Fool lovers</a>
-        <br />
-        <img src="https://64.media.tumblr.com/3095671cf7712f57aeb6be9b73eabed6/d0579d9b57ae2cf8-09/s75x75_c1/aacbbaa66a8176cc482d53ea8be6ec518858f718.gifv" alt="X" />
-      </div>
-    </div>
-
+      
+      
+      
+      
+        <div id="left1">
+        <div id="left2">
+          
+  <div class="box-without-title">
+  <center>
+  <img src="https://64.media.tumblr.com/c89a39e57bbc09633b1bcac6458eb69a/7ea053eec279104e-a5/s500x750/971a8048aa3b51e2d8d0a6b26435edc46e312824.pnj" alt="side-image" width="170">
+  </center> 
   </div>
+          
+<br>
+          
+<div class="title"> title </div>  
+<div class="box">
+<b>Bold text.</b> <i>Italic Text.</i> <a href="">Link.</a>
+           
+</div>
+          
+<br>
 
+<div class="title"> title </div>  
+<div class="box">
+
+</div>
+          
+
+          
+          
+          
+</div>
+</div>
+      
+
+      
+      
+        <div id="content1">
+        <div id="content2">
+          
+           
+<div class="title"> title </div>  
+<div class="box">
+           
+</div>
+          
+<br>
+  
+<div class="title"> title </div>  
+<div class="box">
+           
+
+</div>
+          
+<br>         
+          
+<div class="title"> title </div>  
+<div class="box">
+ 
+</div>
+          
+          
+        </div>
+        </div>
+      
+      
+  
+  
+  
+        <div id="right1">
+        <div id="right2">
+          
+          
+          
+<div class="title"> title </div>  
+<div class="box">  
+   
+
+<div id="menu">
+
+
+           
+</div>
+  
+</div>
+          
+                   
+<br>
+          
+<div class="title"> title </div>  
+<div class="box">               
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</div>
+          
+          
+<br>       
+          
+<div class="title"> title </div>  
+<div class="box">               
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</div>
+          
+          
+</div>
+</div>
+      
+      
+  
+  
+<div id="footer1">
+<div id="footer2">
+<b>Layout: </b> <a href="http://itinerae.blogspot.com" target="_blank">Itinerae</a>  
+<b>Pixels: </b> <a href="https://foollovers.com" target="_blank" alt="x" title="sparkling star pixels, candy cane">Fool lovers</a> <br>
+  
+  <img src="https://64.media.tumblr.com/3095671cf7712f57aeb6be9b73eabed6/d0579d9b57ae2cf8-09/s75x75_c1/aacbbaa66a8176cc482d53ea8be6ec518858f718.gifv" alt="X">
+
+        </div>
+        </div>
+      
+     
+</div>
+  
+ 
+  
 </body>
 </html>
