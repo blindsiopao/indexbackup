@@ -43,5 +43,200 @@
       gap: 20px;
     }
 
-    /* MAIN*
+    /* MAIN CONTENT BOX */
+    #leftcontent {
+      width: 365px;
+      height: 525px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px #d48aa8;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
 
+    #content {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: 2px solid #ffbfce;
+      color: #425757;
+      font-size: 14px;
+      text-align: justify;
+      padding: 15px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    #content h1 {
+      margin: 0px;
+      border-bottom: 2px dotted #7ecca1;
+      color: #ffbfce;
+      text-align: right;
+      font-weight: normal;
+      font-size: 26px;
+    }
+
+    /* RIGHT COLUMN */
+    #right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #righttop,
+    #rightmiddle,
+    #rightbottom {
+      width: 198px;
+      background-color: #fff;
+      border: 6px solid #ffbfce;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    #righttop {
+      height: 160px;
+    }
+
+    #righttopimg {
+      width: 100%;
+      height: 100%;
+      background-color: #a2d5d5;
+      border-radius: 5px;
+      background-image: url('https://i.imgur.com/yoquBAL.png'); /*198x160*/
+      background-size: 100% 100%;
+    }
+
+    #rightmiddle {
+      height: auto;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    #nav a {
+      display: inline-block;
+      background-color: #7ecca1;
+      width: 95px;
+      text-align: center;
+      color: #fff;
+      margin: 2px 0;
+      padding: 2px 0;
+      text-decoration: none;
+    }
+
+    #nav a:hover {
+      color: #67947b;
+    }
+
+    #rightbottom {
+      height: 178px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      font-size: 14px;
+      color: #425757;
+      text-align: justify;
+    }
+
+    #rightbottom h1 {
+      margin: 0px;
+      border-bottom: 2px dotted #7ecca1;
+      color: #ffbfce;
+      text-align: right;
+      font-weight: normal;
+      font-size: 26px;
+    }
+
+    a {
+      color: #7ecca1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #a2d5d5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #a2d5d5;
+      border-radius: 10px;
+    }
+
+    #credit {
+      font-size: 13px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+
+    #credit a {
+      color: #e7f0f0;
+    }
+
+    #credit a:hover {
+      color: #e7f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="all">
+    <!-- LEFT SIDE BOX (e.g. music) -->
+    <div id="left">
+      <div id="leftbox">
+        <div id="leftbox-inner">
+          <!-- Add your music player or content here -->
+          <h3>Song of the Day</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT + RIGHT COLUMN -->
+    <div id="main">
+      <!-- MAIN CONTENT -->
+      <div id="leftcontent">
+        <div id="content">
+          <h1>welcome</h1>
+          <p><b>Lorem ipsum</b> <i>dolor sit amet</i>, <s>consectetur adipiscing elit</s>. Donec rutrum ipsum in leo feugiat, vel imperdiet lacus euismod.</p>
+          <p><a href="#">Nam posuere</a> aliquet tortor, eget tincidunt dui ultrices quis.</p>
+          <p>Nam porttitor mi ante, id efficitur neque convallis in. Mauris neque nulla.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div id="right">
+        <div id="righttop">
+          <div id="righttopimg"></div>
+        </div>
+
+        <div id="rightmiddle">
+          <div id="nav">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">gallery</a>
+            <a href="#">blog</a>
+            <a href="#">links</a>
+            <a href="#">other</a>
+            <a href="#">misc</a>
+            <a href="#">link</a>
+          </div>
+        </div>
+
+        <div id="rightbottom">
+          <h1>header</h1>
+          <p>Nam porttitor mi ante, id efficitur neque convallis in. Mauris neque nulla.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+</body>
+</html>
