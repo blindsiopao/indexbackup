@@ -1,255 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Theme Fix</title>
-  <style>
-    body {
-      background-color: #a2d5d5;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  body {
+    background-color: #a2d5d5;
+    margin: 0;
+    padding: 0;
+  }
 
-    #all {
-      position: relative;
-      width: 920px;
-      margin: 120px auto 0 auto; /* pushes everything down */
-      display: flex;
-      gap: 30px;
-    }
+  #all {
+    position: relative;
+    width: 920px;
+    margin: 120px auto 0 auto; /* pushes everything down */
+    display: flex;
+    gap: 40px; /* Increased gap between song box and main content */
+  }
 
-    /* LEFT COLUMN – SONG OF THE DAY */
-    #leftside {
-      width: 198px;
-    }
+  /* LEFT COLUMN – SONG OF THE DAY */
+  #leftside {
+    width: 198px;
+  }
 
-    #righttop {
-      width: 198px;
-      height: 160px;
-      border: 6px solid #ffbfce;
-      border-radius: 10px;
-      background-color: #fff;
-      padding: 10px;
-    }
+  #righttop {
+    width: 198px;
+    height: 160px;
+    border: 6px solid #ffbfce;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
-    #righttopimg {
-      width: 100%;
-      height: 100%;
-      background-image: url('https://i.imgur.com/yoquBAL.png');
-      background-size: 100% 100%;
-      background-color: #a2d5d5;
-      border-radius: 5px;
-    }
+  #righttopimg {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/yoquBAL.png');
+    background-size: 100% 100%;
+    background-color: #a2d5d5;
+    border-radius: 5px;
+  }
 
-    /* CENTER COLUMN – MAIN CONTENT */
-    #left {
-      width: 385px;
-    }
+  /* CENTER COLUMN – MAIN CONTENT */
+  #left {
+    width: 385px;
+  }
 
-    #leftbox {
-      background-color: #ffbfce;
-      border-radius: 10px;
-      padding: 10px;
-      width: 100%;
-      box-sizing: border-box;
-    }
+  #leftbox {
+    background-color: #ffbfce;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    #leftcontent {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 5px #d48aa8;
-      width: 100%;
-      box-sizing: border-box;
-    }
+  #leftcontent {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #d48aa8;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    #contentbox {
-      padding: 10px;
-    }
+  #contentbox {
+    padding: 10px;
+  }
 
-    #content {
-      width: 312px;
-      height: 355px;
-      border-radius: 10px;
-      border: 2px solid #ffbfce;
-      color: #425757;
-      font-size: 14px;
-      text-align: justify;
-      padding: 15px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
+  #content {
+    width: 312px;
+    height: 355px;
+    border-radius: 10px;
+    border: 2px solid #ffbfce;
+    color: #425757;
+    font-size: 14px;
+    text-align: justify;
+    padding: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
 
-    #content h1 {
-      margin: 0px;
-      border-bottom: 2px dotted #7ecca1;
-      color: #ffbfce;
-      text-align: right;
-      font-weight: normal;
-      font-size: 26px;
-    }
+  #content h1 {
+    margin: 0px;
+    border-bottom: 2px dotted #7ecca1;
+    color: #ffbfce;
+    text-align: right;
+    font-weight: normal;
+    font-size: 26px;
+  }
 
-    #imgbox {
-      padding: 10px;
-      display: none; /* hides the empty image space */
-    }
+  #imgbox {
+    padding: 10px;
+    display: none;
+  }
 
-    /* RIGHT COLUMN */
-    #right {
-      width: 230px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+  /* RIGHT COLUMN */
+  #right {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add space between right boxes */
+  }
 
-    #rightmiddle {
-      height: 90px;
-      border: 6px solid #ffbfce;
-      border-radius: 10px;
-      background-color: #fff;
-      padding: 10px;
-      font-size: 16px;
-      letter-spacing: 1px;
-      box-sizing: border-box;
-    }
+  #rightmiddle,
+  #rightbottom {
+    box-sizing: border-box;
+    border: 6px solid #ffbfce;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+  }
 
-    #nav {
-      padding-top: 2px;
-    }
+  #rightmiddle {
+    min-height: 90px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
 
-    #nav a:hover {
-      color: #67947b;
-    }
+  #nav {
+    padding-top: 2px;
+  }
 
-    .link1, .link2 {
-      background-color: #7ecca1;
-      padding: 1px;
-      width: 95px;
-      text-align: center;
-      color: #fff;
-      display: inline-block;
-      margin-bottom: 2px;
-    }
+  #nav a:hover {
+    color: #67947b;
+  }
 
-    .link1 { float: left; }
-    .link2 { float: right; }
+  .link1,
+  .link2 {
+    background-color: #7ecca1;
+    padding: 1px;
+    width: 95px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 2px;
+  }
 
-    #rightbottom {
-      height: 178px;
-      border: 6px solid #ffbfce;
-      border-radius: 10px;
-      background-color: #fff;
-      padding: 10px;
-      color: #425757;
-      font-size: 14px;
-      text-align: justify;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      box-sizing: border-box;
-    }
+  .link1 {
+    float: left;
+  }
 
-    #rightbottom h1 {
-      margin: 0px;
-      border-bottom: 2px dotted #7ecca1;
-      color: #ffbfce;
-      text-align: right;
-      font-weight: normal;
-      font-size: 26px;
-    }
+  .link2 {
+    float: right;
+  }
 
-    a {
-      color: #7ecca1;
-      text-decoration: none;
-    }
+  #rightbottom {
+    max-height: 178px;
+    overflow-y: auto;
+    color: #425757;
+    font-size: 14px;
+    text-align: justify;
+  }
 
-    a:hover {
-      color: #a2d5d5;
-    }
+  #rightbottom h1 {
+    margin: 0px;
+    border-bottom: 2px dotted #7ecca1;
+    color: #ffbfce;
+    text-align: right;
+    font-weight: normal;
+    font-size: 26px;
+  }
 
-    ::-webkit-scrollbar {
-      width: 7px;
-    }
+  a {
+    color: #7ecca1;
+    text-decoration: none;
+  }
 
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-      border-radius: 10px;
-    }
+  a:hover {
+    color: #a2d5d5;
+  }
 
-    ::-webkit-scrollbar-thumb {
-      background-color: #a2d5d5;
-      border-radius: 10px;
-    }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
 
-    #credit {
-      font-size: 13px;
-      position: fixed;
-      bottom: 0;
-      right: 0;
-    }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+  }
 
-    #credit a {
-      color: #e7f0f0;
-    }
+  ::-webkit-scrollbar-thumb {
+    background-color: #a2d5d5;
+    border-radius: 10px;
+  }
 
-    #credit a:hover {
-      color: #e7f0f0;
-    }
-  </style>
-</head>
-<body>
+  #credit {
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
 
-  <div id="all">
+  #credit a {
+    color: #e7f0f0;
+  }
 
-    <!-- SONG OF THE DAY -->
-    <div id="leftside">
-      <div id="righttop">
-        <div id="righttopimg"></div>
-      </div>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="left">
-      <div id="leftbox">
-        <div id="leftcontent">
-          <div id="contentbox">
-            <div id="content">
-              <h1>welcome</h1>
-              <p><b>Lorem ipsum</b> <i>dolor sit amet</i>, <s>consectetur adipiscing elit</s>...</p>
-              <p>Nam porttitor mi ante, id efficitur neque convallis in...</p>
-              <p>Etiam mollis elit eu ex auctor, id vehicula sem auctor...</p>
-              <p>Integer urna mi, egestas lobortis viverra sit amet...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div id="right">
-      <div id="rightmiddle">
-        <div id="nav">
-          <a class="link1" href="#">home</a>
-          <a class="link2" href="#">about</a>
-          <a class="link1" href="#">gallery</a>
-          <a class="link2" href="#">blog</a>
-          <a class="link1" href="#">links</a>
-          <a class="link2" href="#">other</a>
-          <a class="link1" href="#">misc</a>
-          <a class="link2" href="#">link</a>
-        </div>
-      </div>
-      <div id="rightbottom">
-        <h1>header</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium augue non neque faucibus, nec pretium risus feugiat.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
-
-</body>
-</html>
+  #credit a:hover {
+    color: #e7f0f0;
+  }
+</style>
 
