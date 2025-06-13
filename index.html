@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>theme 25</title>
   <style>
-
 body {
   background-color: #a2d5d5;
+  margin: 0;
+  font-family: sans-serif;
 }
 
+/* Main container with wider width and more top space */
 #all {
-  width: 625px;
+  width: 900px;
   height: 545px;
   position: absolute;
   left: 50%;
-  top: 60%; /* moved everything downward */
+  top: 65%; /* pushes down the whole layout */
   transform: translate(-50%, -50%);
-}
-
-#left {
   display: flex;
   gap: 10px;
-  width: 625px;
-  height: 545px;
 }
 
+/* Left small box */
 #righttop-leftside {
   width: 198px;
   height: 160px;
@@ -36,7 +34,7 @@ body {
   margin-top: 10px;
 }
 
-#righttop-leftside #righttopimg {
+#righttopimg {
   width: 100%;
   height: 100%;
   background-color: #a2d5d5;
@@ -45,6 +43,7 @@ body {
   background-size: 100% 100%;
 }
 
+/* Main content */
 #leftbox {
   background-color: #ffbfce;
   border-radius: 10px;
@@ -97,16 +96,18 @@ body {
   width: 345px;
   height: 100px;
   border-radius: 10px;
-  background-image: url('https://i.imgur.com/As3Tqh2.png'); /* 345x100 */
+  background-image: url('https://i.imgur.com/As3Tqh2.png');
   background-size: 100%;
 }
 
+/* Right-side container with middle and bottom boxes stacked */
 #right {
-  float: right;
-  width: 230px;
-  height: 545px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* Navigation */
 #rightmiddle {
   width: 198px;
   height: 90px;
@@ -114,17 +115,12 @@ body {
   border-radius: 10px;
   background-color: #fff;
   padding: 10px;
-  margin-bottom: 10px;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
 #nav {
   padding-top: 2px;
-}
-
-#nav a:hover {
-  color: #67947b;
 }
 
 .link1,
@@ -146,6 +142,7 @@ body {
   float: right;
 }
 
+/* Bottom text block */
 #rightbottom {
   width: 198px;
   height: 178px;
@@ -173,7 +170,6 @@ a {
   color: #7ecca1;
   text-decoration: none;
 }
-
 a:hover {
   color: #a2d5d5;
 }
@@ -198,64 +194,42 @@ a:hover {
   bottom: 0;
   right: 0;
 }
-
 #credit a {
   color: #e7f0f0;
 }
-
 #credit a:hover {
   color: #e7f0f0;
 }
-
   </style>
 </head>
-
 <body>
 
   <div id="all">
 
-    <div id="left">
-
-      <div id="righttop-leftside">
-        <div id="righttopimg"></div>
-      </div>
-
-      <div id="leftbox">
-
-        <div id="leftcontent">
-
-          <div id="contentbox">
-
-            <div id="content">
-
-              <h1>welcome</h1>
-
-              <p><b>Lorem ipsum</b> <i>dolor sit amet</i>, <s>consectetur adipiscing elit</s>. Donec rutrum ipsum in leo feugiat, vel imperdiet lacus euismod. Proin luctus augue vel erat iaculis laoreet. Donec ornare nibh a nisi suscipit pulvinar. Praesent quis nunc nec enim dapibus imperdiet a eu mauris. Aliquam erat volutpat.</p>
-
-              <p><a href="">Nam posuere</a> aliquet tortor, eget tincidunt dui ultrices quis. Sed aliquam, lectus at cursus pulvinar, nibh turpis cursus est, et viverra tellus enim eu purus. Proin porta, odio non eleifend semper, urna justo ullamcorper mi, non fermentum ex tortor vel nibh. Curabitur leo turpis, pellentesque at massa et, sagittis pretium nulla. Sed sit amet auctor erat.</p>
-
-              <p>Nam porttitor mi ante, id efficitur neque convallis in. Mauris neque nulla, varius sit amet auctor vitae, tempor at metus. Nam posuere ut lectus vitae facilisis. Vivamus hendrerit volutpat est at efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis, justo sit amet fringilla placerat, eros tellus efficitur ex.</p>
-
-              <p>Etiam mollis elit eu ex auctor, id vehicula sem auctor. Morbi sed urna volutpat, vestibulum lorem tristique, dapibus enim. Suspendisse vel turpis ut nibh accumsan consectetur. Curabitur aliquet mi in elit consectetur blandit. Suspendisse tempus tellus tempus massa lacinia ullamcorper. Maecenas auctor mollis lectus, non porttitor orci ornare in. Mauris in lacinia ex.</p>
-
-              <p>Integer urna mi, egestas lobortis viverra sit amet, dapibus in nibh. Morbi sit amet velit id quam rhoncus pretium. Proin tristique lacus in dui ultricies lobortis. Ut in metus malesuada, scelerisque tortor et, lobortis neque. Vivamus sit amet est eget metus pretium tincidunt efficitur viverra erat.</p>
-
-            </div>
-
-          </div>
-
-          <div id="imgbox">
-            <div id="img"></div>
-          </div>
-
-        </div>
-
-      </div>
-
+    <!-- Left box -->
+    <div id="righttop-leftside">
+      <div id="righttopimg"></div>
     </div>
 
-    <div id="right">
+    <!-- Center: Main content -->
+    <div id="leftbox">
+      <div id="leftcontent">
+        <div id="contentbox">
+          <div id="content">
+            <h1>welcome</h1>
+            <p>Lorem ipsum <b>dolor</b> sit amet...</p>
+            <p><a href="">More sample text here</a>...</p>
+            <!-- Add your own content here -->
+          </div>
+        </div>
+        <div id="imgbox">
+          <div id="img"></div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Right side -->
+    <div id="right">
       <div id="rightmiddle">
         <div id="nav">
           <a class="link1" href="">home</a>
@@ -271,13 +245,8 @@ a:hover {
 
       <div id="rightbottom">
         <h1>header</h1>
-        <p>Nam porttitor mi ante, id efficitur neque convallis in. Mauris neque nulla, varius sit amet auctor vitae, tempor at metus. Nam posuere ut lectus vitae facilisis. Vivamus hendrerit volutpat est at efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-
-        <p>Etiam mollis elit eu ex auctor, id vehicula sem auctor. Morbi sed urna volutpat, vestibulum lorem tristique, dapibus enim. Suspendisse vel turpis ut nibh accumsan consectetur. Curabitur aliquet mi in elit consectetur blandit. Suspendisse tempus tellus tempus massa lacinia ullamcorper.</p>
-
-        <p>Integer urna mi, egestas lobortis viverra sit amet, dapibus in nibh. Morbi sit amet velit id quam rhoncus pretium. Proin tristique lacus in dui ultricies lobortis. Ut in metus malesuada, scelerisque tortor et, lobortis neque. Vivamus sit amet est eget metus pretium tincidunt efficitur viverra erat.</p>
+        <p>Content for the bottom box on the right.</p>
       </div>
-
     </div>
 
   </div>
@@ -286,3 +255,4 @@ a:hover {
 
 </body>
 </html>
+
