@@ -13,12 +13,14 @@ body {
 
 /* Main container with wider width and more top space */
 #all {
-  width: 880px; /* or your desired full width */
-  position: relative;
-  margin-top: 100px; /* adjust this to move everything down */
+  width: 900px;
+  height: 545px;
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-}
+  top: 80%; /* pushes down the whole layout */
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
 }
 
 /* Left small box */
@@ -60,7 +62,7 @@ body {
 
 #contentbox {
   width: 345px;
-  height: 385px;
+  height: 225px;
   padding: 10px;
 }
 
@@ -220,7 +222,7 @@ a:hover {
             <!-- Add your own content here -->
           </div>
         </div>
-        
+      
         </div>
       </div>
     </div>
