@@ -1,266 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Theme Fix</title>
+  <head>
 
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>TITLE</title>
 
-  <style>
-  body {
-    background-color: #5e560a;
-    margin: 0;
-    padding: 0;
-  }
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="My personal website!" name="description" />
 
-  #all {
-    position: relative;
-    width: 920px;
-    margin: 140px auto 0 auto; /* pushes everything down */
-    display: flex;
-    gap: 40px; /* Increased gap between song box and main content */
-  }
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  /* LEFT COLUMN – SONG OF THE DAY */
-  #leftside {
-    width: 198px;
-  }
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
 
-  #righttop {
-    width: 198px;
-    height: 160px;
-    border: 6px solid #d16a04;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="./style.css" rel="stylesheet" />
+    
 
-  #righttopimg {
-    width: 100%;
-    height: 100%;
-    background-image: url('https://i.imgur.com/yoquBAL.png');
-    background-size: 100% 100%;
-    background-color: #d13904;
-    border-radius: 5px;
-  }
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%cTemplate generated with petrapixel's layout generator: https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt; color: #922a45; background: #ffd3ef");
+    </script>
+  </head>
+  <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
 
-  /* CENTER COLUMN – MAIN CONTENT */
-  #left {
-    width: 385px;
-  }
-
-  #leftbox {
-    background-color: #d13904;
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #leftcontent {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px #d13904;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #contentbox {
-    padding: 10px;
-  }
-
-  #content {
-    width: 312px;
-    height: 355px;
-    border-radius: 10px;
-    border: 2px solid #d16a04;
-    color: #d45f0a;
-    font-size: 14px;
-    text-align: justify;
-    padding: 15px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-
-  #content h1 {
-    margin: 0px;
-    border-bottom: 2px dotted #d13904;
-    color: #d16a04;
-    text-align: right;
-    font-weight: normal;
-    font-size: 26px;
-  }
-
-  #imgbox {
-    padding: 10px;
-    display: none;
-  }
-
-  /* RIGHT COLUMN */
-  #right {
-    width: 230px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Add space between right boxes */
-  }
-
-  #rightmiddle,
-  #rightbottom {
-    box-sizing: border-box;
-    border: 6px solid #d16a04;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-  }
-
-  #rightmiddle {
-    min-height: 90px;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-
-  #nav {
-    padding-top: 2px;
-  }
-
-  #nav a:hover {
-    color: #67947b;
-  }
-
-  .link1,
-  .link2 {
-    background-color: #7ecca1;
-    padding: 1px;
-    width: 95px;
-    text-align: center;
-    color: #fff;
-    display: inline-block;
-    margin-bottom: 2px;
-  }
-
-  .link1 {
-    float: left;
-  }
-
-  .link2 {
-    float: right;
-  }
-
-  #rightbottom {
-    max-height: 178px;
-    overflow-y: auto;
-    color: #425757;
-    font-size: 14px;
-    text-align: justify;
-  }
-
-  #rightbottom h1 {
-    margin: 0px;
-    border-bottom: 2px dotted #d16a04;
-    color: #ffbfce;
-    text-align: right;
-    font-weight: normal;
-    font-size: 26px;
-  }
-
-  a {
-    color: #7ecca1;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #a2d5d5;
-  }
-
-  ::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #d13904;
-    border-radius: 10px;
-  }
-
-  #credit {
-    font-size: 13px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-
-  #credit a {
-    color: #e7f0f0;
-  }
-
-  #credit a:hover {
-    color: #e7f0f0;
-  }
-</style>
-
-
-
+    <div class="layout">
   
-</head>
-<body>
+      <!-- =============================================== -->
+      <!-- HEADER -->
+      <!-- =============================================== -->
 
-  <div id="all">
+      <header>
+<div class="header-image">
+          <img src="https://i.imgur.com/NkOu382.png" alt="" />
+        </div>
+        <div class="header-content">
+	        <div class="header-title">Website Title</div>
+	        
+        	
+        </div>
+      </header>
 
-    <!-- SONG OF THE DAY -->
-    <div id="leftside">
-      <div id="righttop">
-        <div id="righttopimg"></div>
-      </div>
-    </div>
+	  
+        
+      <!-- =============================================== -->
+      <!-- LEFT SIDEBAR -->
+      <!-- =============================================== -->
 
-    <!-- MAIN CONTENT -->
-    <div id="left">
-      <div id="leftbox">
-        <div id="leftcontent">
-          <div id="contentbox">
-            <div id="content">
-              <h1>welcome</h1>
-              <p><b>Lorem ipsum</b> <i>dolor sit amet</i>, <s>consectetur adipiscing elit</s>...</p>
-              <p>Nam porttitor mi ante, id efficitur neque convallis in...</p>
-              <p>Etiam mollis elit eu ex auctor, id vehicula sem auctor...</p>
-              <p>Integer urna mi, egestas lobortis viverra sit amet...</p>
-            </div>
+      <aside class="left-sidebar">
+	  
+        
+        <!-- NAVIGATION -->
+        <nav>
+          <div class="sidebar-title">Navigation</div>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/page1">Page 1</a></li>
+            <li><a href="/page2">Page 2</a></li>
+            <li><a href="/page3">Page 3</a></li>
+        	<li>
+        	
+              	<details>
+                <summary>Submenu</summary>
+                <ul>
+                  <li><a href="/page-a">Page A</a></li>
+                  <li><a href="/page-b">Page B</a></li>
+                  <li><a href="/page-c">Page C</a></li>
+                  <li><a href="/page-d">Page D</a></li>
+                  <li><a href="/page-e">Page E</a></li>
+                </ul>
+                </details>
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+          </blockquote>
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <ul>
+            <li>List</li>
+            <li>List</li>
+            <li><a href="/">List</a></li>
+            <li>List</li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <marquee>
+          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+          </marquee>
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <img class="full-width-image" src="https://picsum.photos/id/106/1000/400">
+        </div>
+        
+        <div class="sidebar-section">
+          <div class="sidebar-title">Section Title</div>
+          <div class="site-button">
+          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
+        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
           </div>
         </div>
-      </div>
+      </aside>
+	
+      
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        
+
+        <!-- =============================================== -->
+        <!-- MAIN CONTENT -->
+        <!-- =============================================== -->
+
+
+        <section>
+
+          <h1>Page Title (Heading 1)</h1>
+          <p>This layout was generated with <a href="https://petrapixel.neocities.org/" target="_blank">petrapixel</a>'s layout generator. You may remove the credit in the footer, but please leave the credit in the code. Thank you!</p>
+          <p>
+            I will now show you how to use the most common HTML text elements:
+            <b>This is bold text.</b> 
+            <strong>This is also bold text.</strong> 
+            <i>This is italic text.</i> 
+            <em>This is also italic text.</em> 
+            <strike>This is strikethrough text.</strike> 
+            <u>This is underlined text.</u> 
+            <a href="https://petrapixel.neocities.org/">This is a link.</a> 
+            <a href="https://petrapixel.neocities.org/" target="_blank">This is a link that will open in a new tab.</a> 
+            <code>This is code (displayed in a monospace font).</code>
+            <abbr title="Example.">This is an abbreviation (Try hovering over it).</abbr>
+            <mark>This is highlighted text.</mark>
+            This is a line break (The br stands for break.): <br />It's different from a paragraph because it does not add space inbetween the lines of text.
+          </p>
+          <p>This is a paragraph. As you can see, there's a bit of space between it and the previous paragraph.</p>
+
+          <blockquote>This is a blockquote. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</blockquote>
+
+          <h2>Heading 2</h2>
+          <ul>
+            <li>Unsorted list</li>
+            <li>Unsorted list</li>
+            <li>Unsorted list</li>
+          </ul>
+
+          <p>Lorem ipsum dolor sit amet.</p>
+
+          <ol>
+            <li>Sorted list</li>
+            <li>Sorted list</li>
+            <li>Sorted list</li>
+          </ol>
+
+          <h3>Heading 3</h3>
+          <pre>This is preformatted text, which means that     spaces    are preserved:
+          :D</pre>
+
+          <p>This is preformatted code:</p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+   &lt;h1&gt;My First Heading&lt;/h1&gt;
+   &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <p>This is a separator line / divider:</p>
+          <hr /> <!-- hr = horizontal rule -->
+
+          <p>
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+
+          <h4>Heading 4</h4>
+
+          <p>Here are two columns:</p>
+          <div class="two-columns">
+	          <div>
+	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+	          	<p>At
+            vero eos et accusam et justo duo dolores et ea rebum.</p>
+	          </div>
+	          <div>
+	          	<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+	          	<p>At
+            vero eos et accusam et justo duo dolores et ea rebum.</p>
+	          </div>
+          </div>
+
+          <h5>Heading 5</h5>
+
+          <p>This is an image:</p>
+          <img class="image" alt="" src="https://picsum.photos/id/106/200/100" />
+
+          <p>This is a full-width image:</p>
+          <img class="full-width-image" alt="" src="https://picsum.photos/id/106/1000/400" />
+
+          <p>These are multiple images in a row:</p>
+          <div class="images">
+            <img alt="" src="https://picsum.photos/id/106/1000/400" />
+            <img alt="" src="https://picsum.photos/id/106/1000/400" />
+            <img alt="" src="https://picsum.photos/id/106/1000/400" />
+          </div>
+
+          <h6>Heading 6</h6>
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+
+        </section>
+      </main>
+
+
+      <!-- =============================================== -->
+      <!-- FOOTER -->
+      <!-- =============================================== -->
+
+      <footer>
+            <div>Footer Text. <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
+      </footer>
+  
+    <!-- Closing .layout: -->
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div id="right">
-      <div id="rightmiddle">
-        <div id="nav">
-          <a class="link1" href="#">home</a>
-          <a class="link2" href="#">about</a>
-          <a class="link1" href="#">gallery</a>
-          <a class="link2" href="#">blog</a>
-          <a class="link1" href="#">links</a>
-          <a class="link2" href="#">other</a>
-          <a class="link1" href="#">misc</a>
-          <a class="link2" href="#">link</a>
-        </div>
-      </div>
-      <div id="rightbottom">
-        <h1>header</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium augue non neque faucibus, nec pretium risus feugiat.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-      </div>
-    </div>
-  </div>
 
-  <div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
-
-</body>
+    <!-- Add any additional Javascript code (<script></script>) here. -->
+  </body>
 </html>
-
