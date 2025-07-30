@@ -3,105 +3,124 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schleppin'</title>
- 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
- 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <title>theme</title>
  
 <style>
  
 body{
-background-color: #d7c5e0;
+background-color: #CF9F36;
 background-image: url('https://i.imgur.com/9KazOgv.jpeg');
-background-repeat: no-repeat;
-background-size: 100%;
-background-attachment: fixed;
-color: #23262e;
-font-family: 'Cormorant Garamond', serif;
+color: #CF9F36;
 }
  
 #all{
-width: 460px;
+background-color: #CF9F36;
+width: 615px;
 margin: 0 auto;
 }
  
-img{
-opacity: 0.9;
+#side{
+background-color: #fff;
+float: left;
+width: 175px;
+position: fixed;
 }
  
-#header{
-width: 460px;
-margin: 15px 0px 7px 0px;
+#sidepadding{
+padding: 10px;
 }
  
-h1{
-font-family: 'Special Elite', serif;
-text-align: center;
-font-size: 45px;
-font-weight: normal;
-color: #fff;
-margin: 0px;
+.sideimgholder{
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0.7;
+}
+ 
+#sideimg{
+width: 175px;
 }
  
 #nav{
-background-color: #fff;
-width: 460px;
-margin-bottom: 10px;
+font-size: 14px;
+padding: 5px 0px 5px 0px;
 }
  
 ul{
-text-align: center;
-padding: 0px;
 margin: 0px;
+padding-left: 0px;
+width: 175px;
+-webkit-column-count: 2;
+-moz-column-count: 2;
+column-count: 2;
 }
  
 li{
-list-style-type: none;
+list-style-type:;
+width: 71px;
 display: inline;
-padding-left: 5px;
+float: left;
 }
  
-a{
-text-decoration: none;
-color: #657346;
+#sidecontent{
+font-size: 13px;
+text-align: justify;
 }
  
-a:visited{
-color: #657346;
-}
- 
-a:hover{
-font-style: italic;
-font-weight: bold;
-}
- 
-a:active{
-font-style: italic;
-font-weight: bold;
+.divider{
+border-top: 1px dotted #7A787D;
 }
  
 #main{
 background-color: #fff;
-width: 430px;
-padding: 15px;
+float: right;
+width: 425px;
+}
+ 
+.subheaders{
+margin: 0px;
+font-weight: normal;
+letter-spacing: 2px;
+font-size: 20px;
+line-height: 13px;
+color: #fff;
+background-color: #7A787D;
+}
+ 
+.maincontent{
+padding: 0px 15px 15px 15px;
 text-align: justify;
+font-size: 14px;
+letter-spacing: 1px;
+}
+ 
+a{
+text-decoration: none;
+color: #BA7F61;
+}
+ 
+a:visited{
+color: #BA7F61;
+}
+ 
+a:hover{
+font-style: italic;
+}
+ 
+a:active{
+font-weight: bold;
 }
  
 ::-webkit-scrollbar{
-width: 6px; 
+width: 8px; 
 }
  
 ::-webkit-scrollbar-track{
-background-color: #1a1c16;
+background-color: transparent;
 }
  
 ::-webkit-scrollbar-thumb{
-background-color: #43473c;
+background-color: #7A787D;
 }
  
 #credit{
@@ -109,25 +128,6 @@ font-size: 12px;
 position: fixed;
 bottom: 0;
 right: 0;
-}
- 
-#credit a{
-text-decoration: none;
-color: #fff;
-}
- 
-#credit a:visited{
-color: #fff;
-}
- 
-#credit a:hover{
-font-style: italic;
-font-weight: bold;
-}
- 
-#credit a:active{
-font-style: italic;
-font-weight: bold;
 }
  
 </style>
@@ -138,29 +138,59 @@ font-weight: bold;
  
 <div id="all">
  
-<div id="header">
-<h1>Title Here</h1>
+<div id="side">
+<h2 class="subheaders">header here</h2>
+ 
+<div id="sidepadding">
+ 
+<div class="sideimgholder">
+<img id="sideimg" src="https://i.imgur.com/bExQthf.gif">
 </div>
  
 <div id="nav">
 <ul>
-<li><a href="URL HERE">home</a></li>
-<li><a href="URL HERE">about</a></li>
-<li><a href="URL HERE">blog</a></li>
-<li><a href="URL HERE">gallery</a></li>
-<li><a href="URL HERE">links</a></li>
-<li><a href="URL HERE">misc</a></li>
+<li><a href="">home</a></li>
+<li><a href="">about</a></li>
+<li><a href="">gallery</a></li>
+<li><a href="">blog</a></li>
+<li><a href="">links</a></li>
+<li><a href="">misc</a></li>
 </ul>
 </div>
  
-<div id="main">
+<div class="divider"></div>
  
-<img src="https://i.imgur.com/xTBF6tl.jpg" style="width:430px;">
+<div id="sidecontent">
+<p style="margin-top:5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio et neque varius dapibus. Praesent laoreet ipsum.</p>
  
-<p style="margin:0px;">Morbi eleifend, turpis nec tristique iaculis, elit sem aliquam nisl, ut facilisis mauris orci id lectus. Sed luctus ante et ipsum accumsan molestie. Fusce vitae massa vel nunc tincidunt gravida ac eu odio. Mauris vitae massa magna. Aenean vel purus felis. Phasellus feugiat congue dolor eu fringilla. Maecenas vitae dui quis justo tempor tristique id sit amet sapien. Nulla dapibus convallis pharetra. Proin non lorem pretium.</p>
- 
+<div class="sideimgholder">
+<img src="https://i.imgur.com/1dEdQoa.gif">
 </div>
  
+</div>
+</div>
+</div>
+ 
+<div id="main">
+<h2 class="subheaders">header here</h2>
+ 
+<div class="maincontent">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio et neque varius dapibus. Praesent laoreet ipsum nec urna malesuada, quis auctor lorem sagittis. Suspendisse semper nisl vitae ligula varius malesuada. Aenean consequat libero risus, nec rutrum felis tincidunt sed. Nullam non metus in neque vehicula convallis vitae et est. Fusce eleifend leo ut urna vulputate</p>
+ 
+<p>Maecenas a leo sed neque dapibus lobortis. Vestibulum ornare est in fermentum lacinia. Curabitur ut consectetur risus. Donec consectetur lorem eget mauris facilisis, ut tempor dui congue. In nunc.</p>
+ 
+<p>Phasellus luctus elementum sagittis. Sed id blandit nisl. Vivamus volutpat consequat condimentum. Curabitur sit amet eros urna. Curabitur vitae eros elementum, iaculis ipsum eu, tempus massa. Nullam turpis metus, mollis non mi sit amet, ultrices pharetra orci.</p>
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio et neque varius dapibus. Praesent laoreet ipsum nec urna malesuada, quis auctor lorem sagittis. Suspendisse semper nisl vitae ligula varius malesuada. Aenean consequat libero risus, nec rutrum felis tincidunt sed. Nullam non metus in neque vehicula convallis vitae et est. Fusce eleifend leo ut urna vulputate</p>
+ 
+<p>Maecenas a leo sed neque dapibus lobortis. Vestibulum ornare est in fermentum lacinia. Curabitur ut consectetur risus. Donec consectetur lorem eget mauris facilisis, ut tempor dui congue. In nunc.</p>
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio et neque varius dapibus. Praesent laoreet ipsum nec urna malesuada, quis auctor lorem sagittis. Suspendisse semper nisl vitae ligula varius malesuada. Aenean consequat libero risus, nec rutrum felis tincidunt sed. Nullam non metus in neque vehicula convallis vitae et est. Fusce eleifend leo ut urna vulputate</p>
+ 
+<p>Maecenas a leo sed neque dapibus lobortis. Vestibulum ornare est in fermentum lacinia. Curabitur ut consectetur risus. Donec consectetur lorem eget mauris facilisis, ut tempor dui congue. In nunc.</p>
+</div>
+ 
+</div>
 </div>
  
 <div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
