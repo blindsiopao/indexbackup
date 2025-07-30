@@ -299,39 +299,7 @@ audio::-webkit-media-controls-panel {
     text-decoration: none;
 }
 
-/* PAGE TITLE */
-ul#title {
-    padding-left: 0;
-    margin: 0 auto;
-    width: 55vw;
-    font-size: var(--title-font-size);
-    flex-wrap: wrap;
-    display: flex;
-    flex: auto 1 1;
-    justify-content: center;
-    font-family: Pretty Kelly;
-    -webkit-text-stroke: 1px var(--main);
-}
 
-#title li {
-    display: inline-flex;
-    margin: 0.25em;
-    background-size: 200vw auto;
-    background-image: repeating-linear-gradient(to right, #cf3480, #d92f38, #f76d2e, #e9d968, #439d81, #0fa9c3, #3e254d);
-    -webkit-animation: rainbow 10s linear reverse infinite;
-    animation: rainbow 10s linear reverse infinite;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text; 
-}
-
-#title li:nth-child(3n + 0) { transform: rotate(20deg) }
-
-#title li:nth-child(3n + 1) { transform: rotate(-20deg) }
-
-#title li:nth-child(3n + 2) { transform: rotate(10deg) }
-
-@keyframes rainbow { 0% { background-position: 0% 50% } 50% { background-position: 100% 50% } 100% { background-position: 0% 50% } }
 
 /* BADGES */
 #badge-img {
