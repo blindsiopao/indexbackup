@@ -25,7 +25,7 @@
       background-color: #CF9F36;
       width: 175px;
       flex-shrink: 0;
-      position: relative
+      position: relative;
         border: 1px solid #421701;
   border-radius: 10px;       /* 👈 rounded corners */
   padding: 10px;
@@ -97,7 +97,15 @@
       color: #FF5100;
       background-color: #466C85;
     }
-
+#sidebar-header {
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #466C85;
+  color: #FF5100;
+  border: 1px solid #421701;
+}
     .maincontent {
       padding: 0 15px 15px 15px;
       text-align: justify;
@@ -148,7 +156,9 @@
   <div id="all">
 
     <div id="side">
-      <h2 class="subheaders">header here</h2>
+      <h2 class="subheaders" id="sidebar-header">header here</h2>
+
+      
       <div id="sidepadding">
         <div class="sideimgholder">
           <img id="sideimg" src="https://i.imgur.com/bExQthf.gif" alt="Sidebar Image">
