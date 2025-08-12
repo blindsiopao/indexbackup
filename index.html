@@ -349,9 +349,17 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
   width: 100%;
   text-align: center;
   z-index: 1; /* bring it above the background */
-   pointer-events: none;
+  pointer-events: none;
 }
 
+
+
+  .top-bg-image img {
+  pointer-events: none; /* ✅ ONLY the TV frame ignores mouse clicks */
+}
+
+
+  
 .tv-screen {
   position: absolute;
   top: 12.2%;
@@ -841,6 +849,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
   });
 </script>
 </body>
+
 
 
 
