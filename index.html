@@ -67,95 +67,41 @@ background-color: #261103;}
   
   
 #layout {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 20px; /* Add space between items */
-  position: relative;
-  z-index: 1;
-  margin-top: 60px; /* Adjust top margin to balance the elements */
-  width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex; /* Use flexbox for a 3-column layout */
+  justify-content: space-between; /* Distribute space between columns */
+  gap: 20px; /* Optional gap between columns */
+  width: 100%; /* Ensure it takes the full width */
+  margin: 0 auto;
 }
 
-      
-#header1 {
-float: left;
-margin: 0 auto;}
-
-#header2 {
-width: 720px;
-height: 260px;
-background: url() center no-repeat;}
-
-  #header2 {
-  margin-bottom: 30px;
+#left1, #right1 {
+  width: 200px; /* Fix the width of the left and right columns */
 }
-  
-  
-
-.sitename a {color:#E02650;text-transform:uppercase;letter-spacing:5px;
-height:26px;line-height:26px;font:26px 'doto';border-bottom:2px dotted #eee;padding-bottom:4px;}
-.sitename a:hover {color:#fff;}
-  
- 
-#navigation {
-float: left;
-margin: 0 auto;}
-
-#navi {
-width: 720px;
-height: 20px;
-line-height:20px;
-text-align:center;}
-  
-#navi a { 
-display:inline-block;
-background: #EE5397; 
-font:normal 9px 'silkscreen',arial;
-line-height:9px;
-text-transform:uppercase;
-padding-top:2px; 
-padding-left:5px;
-padding-right:5px;
-padding-bottom:2px;
-margin-bottom:4px;
-letter-spacing:1px;
-color:#fff;
-border-radius:10px;
-border:1px solid #D82670;}
-      
-#navi a:hover {
-color:#EBC729;}
-      
 
 #content1 {
-width: 320px;
-float: left;
-margin: 0 auto;}
+  flex-grow: 1; /* Allow the center column to take up the remaining space */
+  width: 100%;
+}
 
-#content2 {
-padding:6px;}
+#header1, #header2 {
+  width: 100%;
+}
 
-  
-#left1 {
-width:200px;
-float: left;
-margin: 0 auto;}
+#navigation {
+  width: 100%;
+  text-align: center;
+}
 
-#left2 {
-padding:6px;
-background:transparent;}
-  
+#left1, #right1 {
+  /* Ensure the left and right sections are fixed and floated */
+  display: flex;
+  flex-direction: column;
+}
 
-#right1 {
-width: 200px;
-float: left;
-margin: 0 auto;}
-
-#right2 {
-padding:6px;
-background:transparent;}
+#left2, #right2 {
+  padding: 6px;
+  background: transparent;
+}
   
 
 .box {
@@ -867,6 +813,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
   });
 </script>
 </body>
+
 
 
 
