@@ -235,7 +235,21 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
   display: inline-block;
 }
 
-  
+
+
+  .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px; /* optional space between images */
+  margin-bottom: 6px;
+}
+
+.image-row img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
 </style>
 </head>
   
@@ -293,11 +307,13 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
       <div class="image-block"><strong>Judy</strong></div>
       <div class="image-block">22</div>
 
-      <div class="image-block"><img src="https://i.imgur.com/GXs7IHK.jpeg"></div>
-      <div class="image-block"><img src="https://i.imgur.com/SJF9wfx.jpeg"></div>
-      <div class="image-block"><img src="https://i.imgur.com/hwpgWVh.jpeg"></div>
-      <div class="image-block"><img src="https://i.imgur.com/bFlgIh2.jpeg"></div>
-      <div class="image-block"><img src="https://i.imgur.com/atsrwZm.png"></div>
+      <div class="image-row">
+  <img src="https://i.imgur.com/GXs7IHK.jpeg">
+  <img src="https://i.imgur.com/SJF9wfx.jpeg">
+  <img src="https://i.imgur.com/hwpgWVh.jpeg">
+  <img src="https://i.imgur.com/bFlgIh2.jpeg">
+  <img src="https://i.imgur.com/atsrwZm.png">
+</div>
 
       <div class="image-block"><img src="https://i.imgur.com/Uy0obfz.png"></div>
       <div class="image-block"><img src="https://i.imgur.com/GRcr7LB.png"></div>
@@ -480,6 +496,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
     document.getElementById('imgModal').style.display = 'none';
   }
 </script>
+
 
 
 
