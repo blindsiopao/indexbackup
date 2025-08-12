@@ -336,13 +336,36 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
         -webkit-appearance: none;
         margin-top: -4.5px; 
     }
-    
+
+
+
+
+  .top-image-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  text-align: center;
+}
+
+.top-image {
+  max-width: 100%;
+  opacity: 0.5; /* adjust to make it more or less faded */
+  pointer-events: none; /* makes it unclickable */
+}
+  
 </style>
 </head>
   
   
 <body>
   
+
+<div class="top-image-wrapper">
+  <img src="https://i.imgur.com/mej0LVp.png" class="top-image">
+</div>
+
+
   
 
 <div id="layout">
@@ -762,6 +785,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         loadTrack(track_index);
         playTrack();
     </script>
+
 
 
 
