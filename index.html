@@ -361,17 +361,22 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 
 
 
-  .tv-screen {
+.tv-screen {
   position: absolute;
-  top: 14.5%;    /* Adjust as needed to align with your TV screen */
-  left: 29.5%;   /* Adjust as needed to align with your TV screen */
-  width: 41%;    /* Adjust based on your TV screen proportions */
-  height: 48%;   /* Adjust as needed */
-  background-color: #000;
-  border-radius: 40px / 20px; /* creates a curved pill-like effect */
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  top: 12.2%;            /* Adjust to align with your TV image */
+  left: 29.6%;
+  width: 41%;
+  height: 49.5%;
   z-index: 0;
+  background-color: #000;
+  overflow: hidden;
+  pointer-events: none;
+
+  /* Optional CRT curvature via clip-path */
+  clip-path: ellipse(85% 60% at 50% 50%);
+  -webkit-clip-path: ellipse(85% 60% at 50% 50%);
+
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .tv-screen video {
@@ -379,27 +384,8 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
   height: 100%;
   object-fit: cover;
   display: block;
-
-
-.tv-screen {
-  position: absolute;
-  top: 12.2%;         /* Adjust based on the TV image proportions */
-  left: 29.6%;
-  width: 41%;         /* Width of the TV screen area */
-  height: 49.5%;      /* Height of the TV screen area */
-  border-radius: 60px / 30px; /* Mimics CRT curve */
-  overflow: hidden;
-  background-color: #000;
-  z-index: -1;        /* Sits behind your content but above the TV image */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-}
-
-.tv-screen video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Keeps video fully covering div */
-  display: block;
+  filter: contrast(1.1) brightness(0.95);
+  pointer-events: auto; /* Re-enable controls interaction */
 }
 
 
@@ -416,19 +402,19 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
   
 
 <div class="top-bg-image">
-  <img src="https://i.imgur.com/mej0LVp.png" alt="Decorative Background">
 
-    <div class="tv-screen">
-    <video
-      id="tvVideo"
-      src="https://files.catbox.moe/lmuqyn.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      controls
-    ></video>
-  </div>
+
+  <div class="tv-screen">
+  <video
+    id="tvVideo"
+    src="https://files.catbox.moe/lmuqyn.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    controls
+  ></video>
+</div>
 </div>
   
 </div>
@@ -880,6 +866,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
   });
 </script>
 </body>
+
 
 
 
