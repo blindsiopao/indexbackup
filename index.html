@@ -340,18 +340,21 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 
 
 
-  .top-image-wrapper {
+ .top-bg-image {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 0;
   text-align: center;
+  z-index: 0; /* ensures it's behind everything else */
+  pointer-events: none; /* allows clicks to pass through */
 }
 
-.top-image {
+.top-bg-image img {
   max-width: 100%;
-  opacity: 0.5; /* adjust to make it more or less faded */
-  pointer-events: none; /* makes it unclickable */
+  opacity: 1; /* set to 1 if you want full visibility */
+  display: block;
+  margin: 0 auto;
 }
   
 </style>
@@ -361,10 +364,9 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 <body>
   
 
-<div class="top-image-wrapper">
-  <img src="https://i.imgur.com/mej0LVp.png" class="top-image">
+<div class="top-bg-image">
+  <img src="https://i.imgur.com/EXAMPLE.png" alt="Decorative Background">
 </div>
-
 
   
 
@@ -668,12 +670,12 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
         let track_list = [
             {
-                name:"HEY JUDE - diana ross and the supremes",
-                path:"https://files.catbox.moe/1pzc86.mp3"
+                name:"YEAR OF THE CAT- al stewart",
+                path:"https://files.catbox.moe/57gjje.mp3"
             },
           {
-                name:"YEAR OF THE CAT - al stewart",
-                path:"https://files.catbox.moe/57gjje.mp3"
+                name:"HEY JUDE - diana ross and the supremes",
+                path:"https://files.catbox.moe/1pzc86.mp3"
             }
           
         ];
@@ -785,6 +787,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         loadTrack(track_index);
         playTrack();
     </script>
+
 
 
 
