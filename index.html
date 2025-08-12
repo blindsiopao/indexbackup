@@ -418,10 +418,17 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 <div class="top-bg-image">
   <img src="https://i.imgur.com/mej0LVp.png" alt="Decorative Background">
 
-  <div class="tv-screen">
-  <video src="https://files.catbox.moe/lmuqyn.mp4" autoplay muted loop playsinline></video>
+    <div class="tv-screen">
+    <video
+      id="tvVideo"
+      src="https://files.catbox.moe/lmuqyn.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+  </div>
 </div>
-
   
 </div>
 
@@ -847,8 +854,31 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
 
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("tvVideo");
 
+    // Try autoplay (muted)
+    const attemptPlay = video.play();
+    if (attemptPlay !== undefined) {
+      attemptPlay.catch(error => {
+        console.warn("Autoplay blocked. Waiting for user interaction to unmute.");
+      });
+    }
 
+    // Unmute on first user click
+    function enableSound() {
+      video.muted = false;
+      video.play().catch(err => {
+        console.error("Play failed after unmute:", err);
+      });
+      document.removeEventListener("click", enableSound);
+    }
+
+    document.addEventListener("click", enableSound);
+  });
+</script>
+</body>
 
 
 
