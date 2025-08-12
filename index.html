@@ -69,6 +69,8 @@ background-color: #261103;}
 #layout {
 margin: 20px auto;
 width: 720px;}
+  position: relative;   /* <-- required for z-index to work */
+  z-index: 1;  
   
       
 #header1 {
@@ -787,6 +789,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         loadTrack(track_index);
         playTrack();
     </script>
+
 
 
 
