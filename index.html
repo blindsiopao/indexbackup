@@ -341,24 +341,6 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 
 
 
-
-.top-bg-image {
-  position: fixed;
-  top: 0;
-  left: 0; /* corrected from -15 */
-  width: 100%;
-  text-align: center;
-  z-index: 1; /* bring it above the background */
-}
-
-
-
-  .top-bg-image img {
-  pointer-events: none; /* ✅ ONLY the TV frame ignores mouse clicks */
-}
-
-
-  
 .tv-screen {
   position: absolute;
   top: 12.2%;
@@ -377,17 +359,39 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
 
 
 
+  
+
+.top-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0; /* corrected from -15 */
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* bring it above the background */
+}
+
+
+
+  .top-bg-image img {
+  pointer-events: none; /* ✅ ONLY the TV frame ignores mouse clicks */
+}
+
+
+  
+
+
+
+
+
 </style>
 </head>
   
   
 <body>
-  
 
-<div class="top-bg-image">
-  <img src="https://i.imgur.com/mej0LVp.png" alt="TV Frame">
-  
-  <div class="tv-screen">
+
+
+   <div class="tv-screen">
     <video
       id="tvVideo"
       src="https://files.catbox.moe/julj7k.mp4"
@@ -398,6 +402,10 @@ textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
       controls
     ></video>
   </div>
+
+<div class="top-bg-image">
+  <img src="https://i.imgur.com/mej0LVp.png" alt="TV Frame">
+  
 </div>
   
 
@@ -846,6 +854,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
   });
 </script>
 </body>
+
 
 
 
