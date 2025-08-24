@@ -1,659 +1,560 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
-  
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<title>What-Me-Worry?</title>
+<link rel="icon" href="https://i.imgur.com/smZQWHx.png" type="image/png">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>What, me worry? </title>
-<link rel="shortcut icon" href="https://i.imgur.com/smZQWHx.png"> 
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
 
-   <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
 
 
-  
-
-</head>
-
-  
 <style>
+
+
+
+body {
+
+
+  background:#D4952A url(https://i.imgur.com/p01MjFV.jpeg) fixed;
+    font-family: 'Freckle Face', cursive;
+    font-size: 12px;
+    color:#361A0E;
+    letter-spacing:0.3px;
+     overflow-x: hidden;
   
-@font-face { font-family: pixel; src: url(https://dl.dropbox.com/s/kmhe7d3n18vdz5e/w95fa.woff?dl=0);}
+}
 
-body{
- background: #f9f9f9 url(https://i.imgur.com/kruckzO.jpeg) fixed repeat-x;
- zoom: 113%;
-  
-letter-spacing:1px;
-font-family: 'Freckle Face', cursive;
-font-size:14px;
-line-height:15px;
-text-shadow:0px 0px 1px #bbb;
-color:#ffecb4;
-letter-spacing:1px;}
+@font-face {
+font-family: 'basiic';
+ src: url('https://file.garden/Zztv0a9yEhr5pmEq/basiic.ttf') format("truetype");
+ }
 
-
-  * {
+* {
   font-family: 'Freckle' 'Face', cursive !important;
 }
 
-a:link, a:visited, a:active { 
-color:#333;text-decoration:none;}
-a:hover {color:#EBC729;}
-
-b {color:#EBC729;}
-  
-img {border:0;}
-
-::-webkit-scrollbar-thumb {
-background-color: #75c8ae;  
-border-radius: 0px;
-border:1px solid #75C8AE;border-right:0;}
-  
-::-webkit-scrollbar {
-width: 5px; height: 0px; 
-background-color: #261103;}
-  
-  
-  
-#layout {
-  display: flex; /* Use flexbox for a 3-column layout */
-  justify-content: space-between; /* Distribute space between columns */
-  gap: 20px; /* Optional gap between columns */
-  width: 100%; /* Ensure it takes the full width */
-  margin: 0 auto;
+p {
+    padding: 10px;
 }
 
-#left1, #right1 {
-  width: 200px; /* Fix the width of the left and right columns */
+#wrapper {
+    margin: 0 auto;
+    width: 700px;
 }
 
-#content1 {
-  flex-grow: 1; /* Allow the center column to take up the remaining space */
-  width: 100%;
+#headerwrap {
+      width: 100%;
+  text-align: center;
 }
 
-#header1, #header2 {
-  width: 100%;
+#header {
+     display: inline-block;
+  border: 1px solid #290E00;
+  background: #E87E25; /* optional */
+  padding: 0;
+  margin: 0;
+}
+  #header h1 {
+  margin: 0;
+  padding: 0;
+  display: block;
+   font-family: 'Freckle' 'Face', cursive;
+}
+
+#header img {
+  display: block;
+}
+
+
+#navigationwrap {
+    width: 700px;
+    float: left;
+    margin: 0 auto;
 }
 
 #navigation {
-  width: 100%;
-  text-align: center;
+    height: 18px;
+    background: #D4952A;
+    border-radius: 10px;
+    border: 1px solid #290E00;
+    margin: 5px;
+    line-height:20px;
+    text-align:center;
+    font:14px arial;
+    padding-top:5px;
+}
+#navigation a {
+  margin: 0 25px; dds space between links */
+  display: inline-block; /* ensures spacing is respected */
+  font-family: 'Savate', serif; /* optional: matches your font */
+  color: #290E00; /* optional: matches your color scheme */
 }
 
-#left1, #right1 {
-  /* Ensure the left and right sections are fixed and floated */
-  display: flex;
-  flex-direction: column;
+#contentwrap {
+    width: 500px;
+    float: left;
+    margin: 0 auto;
 }
 
-#left2, #right2 {
-  padding: 6px;
-  background: transparent;
+#content {
+    background: #E87E25;
+    border-radius: 10px;
+    border: 1px solid #290E00;
+    margin: 5px;
+    padding:5px;
+    font-size: 18px;
 }
-  
 
-.box {
-background:#5a3d2b;
-padding: 4px;
-border:1px solid #e5771e;
-box-shadow: 5px 6px #e5771e;
-margin-bottom:14px;}
+#rightcolumnwrap {
+    width: 200px;
+    float: left;
+    margin: 0 auto;
+}
 
-.scrollbox {
-height:100px;
-overflow:auto;
-overflow-x:hidden;
-background:#fff;
-padding: 4px;
-border:1px solid #D82670;
-box-shadow: 5px 6px #75c8ae;
-margin-bottom:14px;}
-  
+#rightcolumn {
+    background: #E87E25;
+    border-radius: 10px;
+    border: 1px solid #290E00;
+    margin: 5px;padding:5px;
+   font-size: 16px;
+}
+
+#footerwrap {
+    width: 700px;
+    float: left;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footer {
+    height: 22px;
+    background: #D48A24;
+    border-radius: 10px;
+    border: 1px solid #290E00;
+    margin: 5px;
+    line-height:20px;
+    text-align:center;
+    font-size: 12px;
+}
 
 .title {
-font:12px ms gothic, 'pixel', arial;
-color:#fff;
-border-left:4px solid #e5771e;
-background:#F4A127;
-margin-bottom:4px;
-padding-left:4px;
-  
-  height: 14px;
-line-height: 14px;
-overflow: hidden;
-  }
-
-  
-  
-.extralinks a {
-display:inline-block;
-color:#5a3d2b;
-font:normal 13px 'pixelify sans',arial;
-width:150px;
-background:#75c8ae;
-border-left:5px solid #e5771e;
-border-bottom-right-radius:10px;
-padding-left:5px;
-letter-spacing:3px;
-margin-bottom:1px;}
-  
-.extralinks a:hover {color:#EBC729;}
-
-textarea {font:10px calibri,arial;letter-spacing:1px;color:#444;}
-
-
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
+  background:#E87E25;
+  color:#290E00;
+  text-transform:uppercase;
+  font-size:16px;
+  font-family:'Savate', serif;
+  letter-spacing:2px;
+  padding-left:5px;
+  border-bottom:1px solid #290E00;
+  border-left:0px solid #290E00;
+  margin-bottom:5px;
 }
 
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border: 4px solid white;
-  box-shadow: 0 0 20px #000;
-  border-radius: 8px;
-}
-
-
-
-
-
-
-  .image-block {
-  text-align: center;
-  margin-bottom: 2px;
-}
-
-.image-block img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-}
-
-
-
-  .image-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px; /* optional space between images */
-  margin-bottom: 6px;
-}
-
-.image-row img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-}
-
-
-
-
-
-  #musicplayer{
-        background:#E8A43A; /* background color of player */
-        border:2px solid #4D1E00; /* border around player */
-        width:170px; /* width of the player */
-        margin: 0 auto;
-    }
+  #statuscafe {
+    padding: .5em;
+    background-color: darkorange;
+    border: 2px solid burlywood;
+      width: 400px;
+  margin: 0 auto;
     
-    #musicplayer * {
-    box-sizing: border-box;
-    max-width: 100%;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    font-size: 1.2em; /* Optional: make username stand out more */
+    font-weight: bold; 
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+  font-size: 1em;
 }
 
-    .songtitle{
-        padding:5px; /* padding around song title */
-        border-bottom:2px solid #4D1E00; /* border under song title */
-        display:block;
-    }
 
-    .controls{
-        font-size:18px !important; /* size of controls */
-        background-color:#E8A43A; /* background color of controls */
-        text-align:center;
-        width:100%;
-    }
+#audiowrap {
+  width: 150px; /* Set your desired width */
+  padding: 0.5em;
+  background-color: darkorange;
+  border: 2px solid burlywood;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
 
-    .controls td{
-        padding:8px 5px 0px 5px; /* padding around controls */
-    }
+#audiowrap audio {
+  width: 100%; /* Makes the audio player fill the wrapper */
+  outline: none; /* Optional: removes focus outline */
+}
 
-    .seeking{
-        background-color:#E8A43A; /* background color of seeking bar */
-        display:flex;
-        justify-content: space-evenly;
-        padding:5px; /* padding around seeking bar */
-    }
+  
+  h1 {text-align:center;font:26px georgia;font-style:italic;color:#290E00;}
+  
+  
+  
+    ::-webkit-scrollbar-thumb {
+background-color:#4B6B5C;  
+border-radius: 0px;
+border:1px solid #4B6B5C;
+}
+::-webkit-scrollbar {
+width: 7px; height: 4px; 
+background: transparent;
+}
 
-    .current-time{
-        padding-right:5px;
-    }
 
-    .total-duration{
-        padding-left:5px;
-    }
 
-    i.fas:hover{
+a:link, a:visited, a:active {
+color:#290E00;text-decoration:none;}
+a:hover {
+color:#290E00;}
+
+
+#top-right-container {
+  position: fixed;  /* or relative to #wrapper if you want */
+  top: 30px;
+  right: 160px;
+  width: 100px;  /* enough space for the rotated image */
+  height: 100px; /* adjust as needed */
+  pointer-events: none; /* optional, so it doesn’t block clicks */
+}
+
+#top-right-container img {
+ 
+  transform: rotate(20deg);
+  display: block;
+}
+
+
+ #musicplayer{ 
+          font-family: 'basiic';
+          font-weight:bold;
+          height:30px;
+          width:100%;
+          left:0;
+          top:0;
+          position:fixed;
+          margin-bottom:20px;  
+          display:flex;
+          background: linear-gradient(180deg,#77BBFF 0%,  #f0f5ff  45%, #3885d2 47%, #59a3ec 60%, #77BBFF 100%);
+         border:ridge 2px #77BBFF;/* border around player */
+          outline: solid 2px black;  
+         box-shadow: inset 10px 0px 6px -10px #3885d2, inset -13px 0px 6px -10px #3885d2, inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px #3885d2;
+            }
+         
+            .songtitle{ 
+            display:block;
+            padding:2px; /* padding around song title */
+            font-family: 'pixel';
+            margin-top:4px;
+            margin-right: 5px; 
+            font-size:15px;
+            color:black;
+            letter-spacing: 1px; 
+        
+            background: white;/* background of song title */
+            border: gray inset 1px;
+               border-radius:6px;
+               box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+            }
+         
+            .controls{
+              font-size:12px; /* size of controls */
+              text-align:center;
+              width:100px;
+              height:20px;
+              text-decortation:none;
+              filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
+            }
+         
+            .controls td{
+               padding-top:5px; /* padding around controls */
+            }
+         
+            .seeking{
+              width:75%;
+              background: transparent;/* background color of seeking bar */
+              display:flex;
+              justify-content: space-evenly;
+              padding:7px; /* padding around seeking bar */
+               
+            }
+         
+            .current-time{  
+              padding-right:5px;
+              margin-right: 3px; 
+             filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
+               
+            }
+         
+            .total-duration{
+              padding-left:5px;
+              filter: drop-shadow(2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 -2px 0 white)  drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);
+            }
+         
+           .ctrlimg {
+   height:16px;
+   width:16px;
+   }
+    .ctrlimg:hover{
         cursor:help;
     }
-
-    i.fas.fa-pause, i.fas.fa-play, i.fas.fa-forward, i.fas.fa-backward{
-        color:#4D1E00; /* color of controls */
-    }
-    
-    input[type=range] {
-        -webkit-appearance: none;
-        width: 100%;
-        background-color:#E8A43A; /* background color of seeking bar - make the color same as .seeking background color */
-    }
-    
-    input[type=range]:focus {
-        outline: none;
-    }
-    
-    /* settings for chrome browsers */
-    input[type=range]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 2px; /* thickness of seeking track */
-        cursor: help;
-        background: #4D1E00; /* color of seeking track */
-    }
-    
-    input[type=range]::-webkit-slider-thumb {
-        height: 10px; /* height of seeking square */
-        width: 10px; /* width of seeking square */
-        border-radius: 0px; /* change to 5px if you want a circle seeker */
-        background: #4D1E00; /* color of seeker square */
-        cursor: help;
-        -webkit-appearance: none;
-        margin-top: -4.5px; 
-    }
-
-
-
-.tv-screen {
- position: absolute;
-  top: 10%; /* Make it slightly less complex, adjust as needed */
-  left: 50%; 
-  transform: translateX(-50%); /* Center it horizontally */
-  width: 300px; /* Set fixed width for the video */
-  height: auto;
-  z-index: 2; /* Ensure it's above the background */
-  background-color: #000;
-  overflow: hidden;
-  pointer-events: auto;
-  clip-path: ellipse(85% 60% at 50% 50%);
-}
-
-.tv-screen video {
-  width: 100%; /* Make the video fit the screen */
-  height: auto; /* Adjust height to keep aspect ratio */
-}
-
-
-
-
-  
-
-.top-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0; /* corrected from -15 */
-  width: 100%;  
-  height: 100vh;/* still takes up full width */
-  text-align: center;
-  z-index: -1; /* bring it above the background */
-}
-
-
-
-  .top-bg-image img {
-     transform: scale(1.2); /* scale up by 20% */
-  transform-origin: center top;
-  pointer-events: none; /* ✅ ONLY the TV frame ignores mouse clicks */
-}
-
-
-  
-
+            input[type=range] {
+                -webkit-appearance: none;
+                width: 100%;
+              background: transparent;
+            }
+            
+            input[type=range]:focus {
+                outline: none;
+            }
+            
+            input[type=range]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 6px; /* thickness of seeking track */
+                cursor: help;
+                border-radius: 6px;
+                background: black; /* color of seeking track */
+                border: 1px white solid;
+            }
+        
+            input[type=range]::-webkit-slider-thumb {
+              
+                height: 30px; /* height of seeking square */
+                width: 20px; /* width of seeking square */
+                background-image:  url('https://file.garden/Zztv0a9yEhr5pmEq/tumblr_40786d3985453eb5412348aad980ac51_3a9a1088_1280%20(1).gif'); /* image of  seeking square */
+                background-size: 25px;
+                -webkit-appearance: none;
+                margin-top: -10px;
+                
+            }
+            
+        input[type=range].volume_slider::-webkit-slider-runnable-track { 
+            background: white; /* color of volume seeking track */
+             filter:drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0.5px black) drop-shadow(0 0.5px black) drop-shadow(0.5px 0.5px 0 black) drop-shadow(0.5px 0.5px 0 black);  /* outline of volume seeking track */ 
+            }
+            
+         input[type=range].volume_slider::-webkit-slider-thumb {
+            background-image: url(https://file.garden/Zztv0a9yEhr5pmEq/798d7d72_original.png);/* image of volume seeking square */
+            background-size: 20px;
+            height: 20px; /* height of volume seeking square */
+            width: 20px; 
+            margin-top: -8px;
+           }
+         
+         
+        .slider_container {  
+          width: 15%;       /* width of volume seeker */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }    
+        
+        
 
 
 
 
 </style>
 </head>
-  
-  
+
+
+
+
+
+
+
+
+
 <body>
 
 
+ 
+<br><br><br><br>
 
-   <div class="tv-screen">
-    <video
-      id="tvVideo"
-      src="https://files.catbox.moe/pskiv8.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      controls
-    ></video>
-  </div>
-
-<div class="top-bg-image">
-  <img src="https://i.imgur.com/mej0LVp.png" alt="TV Frame">
-  
-</div>
-  
-
-<div id="layout">
-    
-  
-    
-<div id="header1">
-<div id="header2">
-  
-<center>
-<img src="">
-</center>
-<br>
-  
-<div class="sitename">
-</div>
-  
-  
-  
-</div>
-</div>
-  
-   
-      
-      
-<div id="navigation">
-  
-<div id="navi">
-
-
-
-  
-</div>
-  
-</div>
-      
-  
-  <div style="clear: both;"></div>
-  
-      
-<div id="left1">
-  <div id="left2">
-    
-    <!-- Box 1 -->
-    <div class="box">
-      <div class="image-block"><img src="https://i.imgur.com/tsUO1j1.gif"></div>
-      <div class="image-block"><img src="https://i.imgur.com/q6BGLhY.png"></div>
-
-      <div class="image-block"><strong>Judy</strong></div>
-      <div class="image-block">22</div>
-
-      <div class="image-row">
-  <img src="https://i.imgur.com/GXs7IHK.jpeg">
-  <img src="https://i.imgur.com/SJF9wfx.jpeg">
-  <img src="https://i.imgur.com/hwpgWVh.jpeg">
-  <img src="https://i.imgur.com/bFlgIh2.jpeg">
-</div>
-<br>
-      <div class="image-block"><img src="https://i.imgur.com/Uy0obfz.png"></div>
-      <div class="image-block"><img src="https://i.imgur.com/GRcr7LB.png"></div>
-      <div class="image-block"><img src="https://i.imgur.com/QnL9mVL.png"></div>
-      <div class="image-block"><img src="https://i.imgur.com/ATqkwgL.png"></div>
-
-      <div class="image-block"><img src="https://i.imgur.com/q6BGLhY.png"></div>
-    </div>
-    
-
-    <!-- Box 2: Extra Links -->
-    <div class="box">
-      <div class="extralinks">
-        <a href="">Top 20 songs!</a><br>
-        <a href="">Modern Delights</a><br>
-        <a href="vintage memorabilia">?</a><br>
-        <a href="">?</a><br>
-      </div>
-    </div>
-
-    <!-- Box 3: Wide Images -->
-    <div class="box">
-      <div class="image-block"><img src="https://i.imgur.com/birWNag.png" width="239" height="49"></div>
-      <div class="image-block"><img src="https://i.imgur.com/6rhEEL5.jpeg" width="239" height="49"></div>
-      <div class="image-block"><img src="https://i.imgur.com/b9rlyk6.jpeg" width="239" height="49"></div>
-      <div class="image-block"><img src="https://i.imgur.com/zqpmK94.gif" width="239" height="49"></div>
-      <div class="image-block"><img src="https://i.imgur.com/1ph5zjx.jpeg" width="239" height="49"></div>
-      <div class="image-block"><img src="https://i.imgur.com/tHbvzGF.png" width="239" height="49"></div>
-    </div>
-
-    <!-- Box 4: Small Banners -->
-    <div class="box">
-      <div class="image-block"><img src="https://i.imgur.com/5fFmXtz.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/TaBPRfQ.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/JNXstPI.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/zbSqtkP.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/oRhKvKv.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/W43zpBD.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/gKGnrjy.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/FoAFO1w.gif" width="150" height="20"></div>
-      <div class="image-block"><img src="https://i.imgur.com/6EUEYF8.gif" width="150" height="20"></div>
-     
-    </div>
-
-  </div>
-</div>
-
-      
-      
-<div id="content1">
-<div id="content2">
-  
-<div class="box">
-<div class="title"> Title </div>  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus est, dapibus a dignissim bibendum, porttitor at eros. Vestibulum id quam a massa rutrum viverra eget quis metus. Sed vitae mi dignissim, commodo felis sit amet, iaculis nulla. Mauris condimentum est eget tellus facilisis accumsan. Cras aliquet orci mi, eget eleifend ante scelerisque eget. In in arcu auctor, vestibulum enim a, porttitor tellus. Proin ut urna et risus accumsan bibendum. In hac habitasse platea dictumst. Quisque egestas quam vel orci gravida consectetur. Vestibulum at dapibus neque. Phasellus congue justo vel fermentum faucibus.
-</div>
-  
-<div class="box">
-<div class="title"> Title </div>  
-Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at elit quis purus rhoncus tincidunt sit amet non nisl. Phasellus hendrerit pulvinar porttitor. Mauris molestie gravida risus. Praesent convallis urna sapien, quis commodo ex tempus id. Ut accumsan rhoncus eros et mattis. Vestibulum consequat sit amet ante commodo tincidunt. Cras non lectus dapibus, pellentesque orci et, porta mi. Nulla facilisi.
-</div>
-  
-<div class="box">
-  <div class="title"> My Everyday Carry ! </div>  
-
-  <div class="image-block">
-    <img src="https://i.imgur.com/5Lp76A9.jpeg" class="clickable-img" onclick="openModal(this.src)">
-  </div>
-
-  <div class="image-block">
-    <img src="https://i.imgur.com/JGDWknm.png">
-  </div>
-
-  <br>
-
-  1) Cult of Weimar Tarot Deck<br>
-  2) Mp3 Player<br>
-  3) Always taking a book with me!<br>
-  4) Wally the Duck<br>
-  5) Canon Ftb camera<br>
-  6) Dandelion tea<br>
-  7) Lipgloss<br>
-  8) Magen David<br>
-  9) Digestive Enzymes<br>
-  10) My Phone
-</div>
-          
-
-  
-  
-</div>
-<!--PLEASE DO NOT REMOVE THIS !! -->
-<center><b>Layout made by </b> <a href="http://itinerae.blogspot.com" target="_blank">Itinerae.</a></center>
-
-
-</div>
-      
-      
-  
-  
-  
-<div id="right1">
-<div id="right2">
-          
-<div class="box"> 
-
-<div id="musicplayer">
-        <div>
-            <marquee scrollamount="8" class="songtitle"></marquee>
-        </div>
-
-        <table class="controls">
+ <div id="musicplayer">
+        
+             <table class="controls">
             <tr>
                 <td>
-                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward"></i></div>
+                    <div class="prev-track" onclick="prevTrack()"><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/back.png'></div>
                 </td>
                 <td>
-                    <div class="playpause-track" onclick="playpauseTrack()" ><i class="fas fa-play"></i></div>
+                    <div class="playpause-track" onclick="playpauseTrack()" ><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/play.png'></div>
                 </td>
                 <td>
-                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward"></i></div>
+                    <div class="next-track" onclick="nextTrack()"><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/next.png'></div>
                 </td>
             </tr>
         </table>
-
+        
+ <div>
+            <marquee scrollamount="8" class="songtitle"></marquee>
+        </div>
         <div class="seeking">
             <div class="current-time">00:00</div>
-
+ 
             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-
+ 
             <div class="total-duration">0:00</div>
         </div>
-
+ <div class="slider_container">
+ 
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="0" max="20"
+        value="10" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+    
         <audio id="music" src=""></audio> 
     </div>
+  <!-- player by adilene.net--> 
 
 
 
-  
-</div>
+    <div id="wrapper">
+    
+    
+        <div id="headerwrap">
+        <div id="header">
+            <h1><img src="https://i.imgur.com/Jh9svCY.png"></h1>
+        </div>
+        </div>
+        <div id="navigationwrap">
+        <div id="navigation">
         
-  
-<div class="box">
-  <div class="image-block"><img src="https://i.imgur.com/6W7QWUr.png" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/K1Wjwn5.png" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/VhAKRv1.png" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/8mwWMQS.jpeg" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/n7hVEam.jpeg" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/S7wVqEq.jpeg" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/mB0Yq2Y.png" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/6PNbSzM.jpeg" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/9986CXz.png" width="239" height="49"></div>
-  <div class="image-block"><img src="https://i.imgur.com/i7XzmVM.jpeg" width="239" height="49"></div>
-</div>
-  
-<div class="box">
-<div class="title"> Title </div>  
+            <a href="https://what-meworry.neocities.org/me">ME!</a>  <a href="kvetchland">?</a> <a href="shrines">?</a> <a href="books">?</a> <a href="modern oldies">?</a>
+        </div>
+        </div>
+        <div id="contentwrap">
+        <div id="content">
+        <strong><div class="title"> <img src="https://i.imgur.com/kyDFKTj.gif"> Turn on, tune in, and drop out schleppers...and behold the greatest century there ever was...</div></center></strong>
+   
+<center><img src="https://i.imgur.com/v42rXIc.gif"></center>
+        
+         <center> 
+         
+         Welcome to my sandbox in this corner of the interwebs-- this here is a blog dedicated to celebrating my love for the mid-twentieth century (late 50s, 60s, and 70s) 
+          <br>
+          <br>
+        i'm still in the process of remaking my whole site so, at the time you're seeing this, this may be the only active page here. But I promise this'll be such a boss site once i get my fingers clacking on the keyboard! 
+        </center>
 
+        <h1 style="font-family: 'Freckle Face', cursive;"><img src="https://i.imgur.com/glxIyhj.png"> Keep on truckin!</h1>
+        
+        <center>
+<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=whaaaaaatmeworry" defer></script>
+             <br>
 
+        </center>
+        
+        <center><img src="https://i.imgur.com/h2Az9oU.png" width="480"></center>
 
-
-  
+           
+             
+      
+    
           
+       
+          
+          
+          
+          
+        </div>
+        </div>
+
+
+      
+        <div id="rightcolumnwrap">
+        <div id="rightcolumn">
+        
+        <img src="https://i.imgur.com/hiLaOa0.png" width="178"><br>
+        
+  <div class="title">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    <img src="https://i.imgur.com/kyDFKTj.gif" alt="Animated GIF">
+    What, me worry?
+    <img src="https://i.imgur.com/kyDFKTj.gif" alt="Animated GIF">
+  </marquee>
 </div>
 
 
+          
+      Formerly "The Cyber Tomboy"--shes dead now! Choked on hanukkah tinsel!
+      <br>
+      contact her wayward spirit here!
+      <br>
+      <img src="https://i.imgur.com/FXFqvAe.gif">  [judy.tzippi@proton.me]
+      
+      
+      <br>
+      <br>
+      <center><img src="https://i.imgur.com/m3NkvKq.png"></center>
+   
+      <center>[MY BUTTON]</center>
+          <br>
+          <center>
 
+          
+        
+          
+           
+          <br>
+          
+<center>
+<iframe src="https://www3.cbox.ws/box/?boxid=3533582&boxtag=saJiGi" width="180" height="300" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+</center>
+<center><img src="https://i.imgur.com/XpLqF9H.gif"></center>
 
-
-  
-<div class="box">
-<div class="title"> Title </div>  
-
-
-
-
-  
  </div>
-          
+        </div>
+        
+        </center>
+        
+        
+     <div id="footerwrap">
+  <div id="footer">
+  <a href="https://stories.bringthemhomenow.net/about-them" target="_blank">
+      <img src="https://i.imgur.com/a2jogLL.gif">
+    </a>
+    Layout made by the ever lovely  
+    <a href="http://itinerae.neocities.org" target="_blank">
+      Itinerae. You have my heart :)
+    </a>
+    <a href="https://stories.bringthemhomenow.net/about-them" target="_blank">
+      <img src="https://i.imgur.com/a2jogLL.gif">
+    </a>
+  </div>
+</div>
+
+
+</div>
+    </div>
+    
+    
+  <div id="top-right-container">
+  <img src="https://i.imgur.com/8GPsDvt.png">
+</div>
+    
+   
+    
+    
+    
+
+    
      
-  
-  
-</div>
-</div>
-      
-      
- 
-  
-  
-</div>
-
-
-
-
-  <div id="imgModal" class="modal" onclick="closeModal()">
-  <img id="modalImg">
-</div>
-  
-  
-  
-</body>
-</html>
-
-
-
-<script>
-  function openModal(src) {
-    document.getElementById('imgModal').style.display = 'flex';
-    document.getElementById('modalImg').src = src;
-  }
-
-  function closeModal() {
-    document.getElementById('imgModal').style.display = 'none';
-  }
-</script>
-
-
-
-
- <script>
+     <script>
         // initiate variables
         let track_name = document.querySelector(".songtitle");
-
+ 
         let playpause_btn = document.querySelector(".playpause-track");
         let next_btn = document.querySelector(".next-track");
         let prev_btn = document.querySelector(".prev-track");
-
+ 
         let seek_slider = document.querySelector(".seek_slider");
         let curr_time = document.querySelector(".current-time");
         let total_duration = document.querySelector(".total-duration");
-
+ let volume_slider = document.querySelector(".volume_slider");
         let track_index = 0;
         let isPlaying = false;
         let updateTimer;
@@ -666,72 +567,78 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         // MORE THAN FOUR SONGS CAN BE ADDED!!
         // JUST ADD ANOTHER BRACKET WITH NAME AND PATH
         // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
-        let track_list = [
-            {
-                name:"YEAR OF THE CAT- al stewart",
-                path:"https://files.catbox.moe/57gjje.mp3"
-            },
+         let track_list = [
           {
-                name:"HEY JUDE - diana ross and the supremes",
-                path:"https://files.catbox.moe/1pzc86.mp3"
+                name:"AQUARIUS/LET THE SUNSHINE IN - the 5th dimension (1969)",
+                path:"https://files.catbox.moe/aixh7r.mp3"
             }
-          
         ];
         //
         //
         //
         //
-        //
-
+        // the default volume of the song feel free to change
+          vid = document.getElementById("music");
+                              vid.volume = 0.1; 
+                              
+           function setVolume() {
+            // Set the volume according to the
+            // percentage of the volume slider set
+           
+            curr_track.volume = volume_slider.value / 100;
+          }
+          
+                              
         function loadTrack(track_index) {
             clearInterval(updateTimer);
             resetValues();
-
+ 
             // load a new track
             curr_track.src = track_list[track_index].path;
             curr_track.load();
             
             // update details of the track
             track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
-
+ 
             // set an interval of 1000 milliseconds for updating the seek slider
             updateTimer = setInterval(seekUpdate, 1000);
             
             // move to the next track if the current one finishes playing 
             curr_track.addEventListener("ended", nextTrack);
         }
-
+ 
         // reset values
         function resetValues() {
             curr_time.textContent = "0:00";
             total_duration.textContent = "0:00";
             seek_slider.value = 0;
         }
-
+ 
         // checks if song is playing
         function playpauseTrack() {
             if (!isPlaying) playTrack();
             else pauseTrack();
         }
-
+ 
         // plays track when play button is pressed
         function playTrack() {
             curr_track.play();
             isPlaying = true;
             
             // replace icon with the pause icon
-            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+                playpause_btn.innerHTML = "<img class='ctrlimg'  src='https://file.garden/Zztv0a9yEhr5pmEq/pause.png'></img>";
         }
-
+ 
         // pauses track when pause button is pressed
         function pauseTrack() {
             curr_track.pause();
             isPlaying = false;
             
             // replace icon with the play icon
-            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+            playpause_btn.innerHTML = "<img class='ctrlimg'  src='https://file.garden/Zztv0a9yEhr5pmEq/play.png'></img>";
         }
-
+ 
+ 
         // moves to the next track
         function nextTrack() {
             if (track_index < track_list.length - 1)
@@ -740,7 +647,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
             loadTrack(track_index);
             playTrack();
         }
-
+ 
         // moves to the previous track
         function prevTrack() {
             if (track_index > 0)
@@ -749,13 +656,13 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
             loadTrack(track_index);
             playTrack();
         }
-
+ 
         // seeker slider
         function seekTo() {
             seekto = curr_track.duration * (seek_slider.value / 100);
             curr_track.currentTime = seekto;
         }
-
+ 
         function seekUpdate() {
             let seekPosition = 0;
             
@@ -775,7 +682,7 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
             if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
             if (currentMinutes < 10) { currentMinutes = currentMinutes; }
             if (durationMinutes < 10) { durationMinutes = durationMinutes; }
-
+ 
             curr_time.textContent = currentMinutes + ":" + currentSeconds;
             total_duration.textContent = durationMinutes + ":" + durationSeconds;
           }
@@ -783,150 +690,18 @@ Integer vestibulum scelerisque leo, ut pretium orci consectetur vitae. Cras at e
         
         // load the first track in the tracklist
         loadTrack(track_index);
-        playTrack();
-    </script>
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("tvVideo");
-
-    // Try autoplay (muted)
-    const attemptPlay = video.play();
-    if (attemptPlay !== undefined) {
-      attemptPlay.catch(error => {
-        console.warn("Autoplay blocked. Waiting for user interaction to unmute.");
-      });
-    }
-
-    // Unmute on first user click
-    function enableSound() {
-      video.muted = false;
-      video.play().catch(err => {
-        console.error("Play failed after unmute:", err);
-      });
-      document.removeEventListener("click", enableSound);
-    }
-
-    document.addEventListener("click", enableSound);
-  });
-</script>
+        playTrack(); 
+         </script>
+         
+         
+         
+    
+    
+    
+    
+    
+  
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
+</body>
+</html>
